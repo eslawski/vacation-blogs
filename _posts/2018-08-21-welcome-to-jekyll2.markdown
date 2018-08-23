@@ -1,9 +1,11 @@
 ---
 layout: post
+number: "01"
 title:  American history
 better_date:   May 31st, 2018
 categories: jekyll update
 image: public/post-entry-pics/tester_2.jpg
+hero-image: public/post-hero-pics/tester_2.jpg
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

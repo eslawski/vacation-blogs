@@ -10,6 +10,12 @@ html, body {
   font-family: 'Montserrat', serif;
 }
 
+p {
+  font-weight: 400;
+  line-height: 1.6;
+  color: #6C7A89;
+}
+
 .sidebar {
   color: rgba(255,255,255,.5);
   background-color: #202020;
@@ -79,8 +85,11 @@ html, body {
           height: 100%;
           width: 100%;
           background-size: cover;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
           display: block;
           transition: all 1s ease;
+          -webkit-transition: all 1s ease;
 
           &:hover {
             width: 105%;
@@ -100,6 +109,58 @@ html, body {
           }
 
         }
+      }
+    }
+  }
+
+  .post {
+    .hero {
+      position: relative;
+      background-size: cover !important;
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      text-align: center;
+      min-height: 500px;
+      letter-spacing: 2px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      //&:after {
+      //  content: '';
+      //  display: block;
+      //  position: absolute;
+      //  left: 0;
+      //  right: 0;
+      //  top: 0;
+      //  bottom: 0;
+      //  background: rgba(127, 127, 127, 0.5);
+      //  background-image: radial-gradient(black 33%, transparent 33%);
+      //  background-size: 2px 2px;
+      //}
+
+      .post-number {
+        border-bottom: 2px solid #fff;
+        font-size: 2.5em;
+      }
+
+      .post-title {
+        font-size: 3em;
+      }
+    }
+
+    .post-content {
+      padding: 40px 60px 60px;
+
+      p {
+        font-size: 1.25em;
+      }
+
+      .post-date {
+        font-size: 2em;
+        font-weight: bold;
+        color: #000000;
       }
     }
   }
