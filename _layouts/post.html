@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div id="image-modal">
-    <img class="modal-content"/>
-    <!--<div id="caption"></div>-->
+    <img class="modal-image"></img>
+    <div class="modal-caption"></div>
 </div>
 
 <div class="post">
@@ -29,7 +29,9 @@ layout: default
   <h1 class="additional-images-title">Additional Images</h1>
   <div class="additional-images">
     {%- for image in page.additional_images -%}
-    <img class="blog-image" src="{{image}}">
+    {% assign image_path = {{site.baseurl}} | append: {{site.images_directory}} | append: {{page.number}} |append: "/" | append: {{image[0]}} %}
+    <img class="blog-image" src="{{image_path}}" data-caption="{{image[1]}}">
+
     {%- endfor -%}
   </div>
   {%- endif -%}

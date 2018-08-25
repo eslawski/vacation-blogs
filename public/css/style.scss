@@ -211,7 +211,7 @@ p {
         display: flex;
 
         img {
-          max-width: 80%;
+          max-width: 60%;
         }
       }
     }
@@ -307,22 +307,19 @@ p {
 
   &.showing {
     display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .modal-content {
+  .modal-image {
     display: block;
     width: 80%;
-    max-width: 700px;
+    height: 80%;
   }
 
   .modal-caption {
-    margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
     color: #ccc;
     padding: 10px 0;
-    height: 150px;
   }
 }
