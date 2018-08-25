@@ -20,4 +20,14 @@ layout: default
       {{ content }}
     </div>
   </div>
+
+  {%- if page.additional_images -%}
+  <h1>Additional Images</h1>
+  <div class="additional-images">
+    {%- for image in page.additional_images -%}
+    <img class="blog-image" src="{{image}}">
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+
 </div>
