@@ -7,16 +7,17 @@ layout: default
     <div class="post-list">
         {%- for post in site.posts -%}
         <div class="post-entry-container">
-                <a class="page-link post-entry-image"
+            {% assign entry_image_path = {{site.baseurl}} | append: {{site.images_directory}} | append: {{post.number}} |append: "/" | append: {{post.entry_image}} %}
+            <a class="page-link post-entry-image"
                    href="{{ post.url | relative_url }}"
                    style="background-image: linear-gradient(to bottom,rgba(22,27,33,0) 0,
                                                     rgba(22,27,33,.01) 1%,
                                                     rgba(22,27,33,.2) 70%,
                                                     rgba(22,27,33,.7) 100%),
-                                                     url({{post.image}})">
+                                                     url({{entry_image_path}})">
                 </a>
             <div class="post-entry-text">
-                <div class="date">{{post.better_date}}</div>
+                <div class="date">{{ page.date | date_to_string: "ordinal", "US" }}</div>
                 <div class="title">{{post.title}}</div>
             </div>
         </div>

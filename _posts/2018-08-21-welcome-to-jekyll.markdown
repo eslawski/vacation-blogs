@@ -1,9 +1,8 @@
 ---
 layout: post
-number: "00"
+number: 00
 title:  A cool new brewery
-better_date:   May 31st, 2018
-categories: jekyll update
+image_folder:
 image: public/post-entry-pics/tester_1.jpg
 hero-image: public/post-hero-pics/tester_1.jpg
 ---

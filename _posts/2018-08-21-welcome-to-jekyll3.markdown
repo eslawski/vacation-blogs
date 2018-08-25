@@ -2,10 +2,8 @@
 layout: post
 number: "02"
 title:  My Beautiful Wife
-better_date:   May 31st, 2018
-categories: jekyll update
-image: /public/post-entry-pics/tester_3.jpg
-hero-image: /public/post-hero-pics/tester_3.jpg
+entry_image: tester_3.jpg
+hero_image: tester_3_hero.jpg
 additional_images:
     - https://picsum.photos/600/450
     - https://picsum.photos/450/600
