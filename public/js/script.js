@@ -55,4 +55,14 @@ $(function() {
             $('#image-modal').removeClass("showing");
         }
     });
+
+    // Menu toggle
+    $('.mobile-menu-toggle').click(function() {
+        $('body').toggleClass("menu-open");
+    });
+
+    // Menu toggle
+    $('.menu-item').click(function() {
+        $('body').toggleClass("menu-open");
+    });
 });

@@ -7,6 +7,12 @@
       <p class="lead">{{ site.description }}</p>
     </div>
 
+      <div class="mobile-menu-toggle">
+        <div class="mobile-menu-icon">
+          <span></span>
+        </div>
+      </div>
+
     <nav class="sidebar-nav">
       <a class="page-link sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Blogs</a>
 
@@ -18,7 +24,23 @@
           {% endif %}
         {% endif %}
       {% endfor %}
-
     </nav>
+
+    <div id="modal-menu">
+      <ul class="menu-list-items">
+        {% assign pages_list = site.pages %}
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if node.layout == "page" %}
+              <li class="menu-item">
+                <a class="page-link {% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+              </li>
+          {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
   </div>
+
 </div>
