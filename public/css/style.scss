@@ -53,14 +53,12 @@ p {
       margin-bottom: 0;
 
       @media only screen and (max-width: 1024px) {
-        font-size: 2.5em;
+        font-size: 1.5em;
       }
     }
 
-    @media only screen and (max-width: 1024px) {
-      p {
-        margin: 0;
-      }
+    p {
+      margin: 0 0 20px 0;
     }
   }
 
@@ -76,6 +74,7 @@ p {
       line-height: 1.75;
       color: #fff;
       text-decoration: none;
+      font-size: 1.5em;
 
       &:hover,
       &:focus {
@@ -155,6 +154,10 @@ p {
 
         .title {
           font-size: 2.25rem;
+
+          @media only screen and (max-width: 768px) {
+            font-size: 1.5em;
+          }
         }
 
       }
@@ -172,12 +175,16 @@ p {
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;
     text-align: center;
-    min-height: 500px;
+    height: 80vh;
     letter-spacing: 2px;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 1024px) {
+      height: 60vh;
+    }
 
     .post-number {
       border-bottom: 2px solid #fff;
@@ -186,6 +193,10 @@ p {
 
     .post-title {
       font-size: 3em;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 2em;
+      }
     }
   }
 
@@ -203,15 +214,24 @@ p {
 
       p {
         font-size: 1.25em;
+
+        @media only screen and (max-width: 768px) {
+          font-size: 16px;
+        }
       }
 
       .image-wrap {
         align-items: center;
         justify-content: center;
         display: flex;
+        padding: 20px 0 20px 0;
 
         img {
-          max-width: 60%;
+          width: 70%;
+
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+          }
         }
       }
     }
@@ -220,6 +240,10 @@ p {
       font-size: 2em;
       font-weight: bold;
       color: #000000;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 1.25em;
+      }
     }
   }
 

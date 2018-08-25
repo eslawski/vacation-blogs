@@ -3,7 +3,7 @@ layout: post
 number: "01"
 title:  Adventures in Thailand
 entry_image: entry_image.jpg
-hero_image: image_10.jpg
+hero_image: hero_image.jpg
 image_2: image_2.jpg
 image_3: image_3.jpg
 image_9: image_9.jpg
