@@ -3,12 +3,12 @@ layout: default
 ---
 
 <div id="image-modal">
-    <img class="modal-image"></img>
+    <img class="modal-image"/>
     <div class="modal-caption"></div>
 </div>
 
 <div class="post">
-  {% assign hero_image_path = {{site.baseurl}} | append: {{site.images_directory}} | append: {{page.number}} |append: "/" | append: {{page.hero_image}} %}
+  {% assign hero_image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/" | append: page.hero_image %}
 
   <div class="hero"
        style="background: linear-gradient(to bottom,rgba(22,27,33,.2) 0,rgba(22,27,33,.2) 100%),
@@ -29,7 +29,7 @@ layout: default
   <h1 class="additional-images-title">Additional Images</h1>
   <div class="additional-images">
     {%- for image in page.additional_images -%}
-    {% assign image_path = {{site.baseurl}} | append: {{site.images_directory}} | append: {{page.number}} |append: "/" | append: {{image[0]}} %}
+    {% assign image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/" | append: image[0] %}
     <img class="blog-image" src="{{image_path}}" data-caption="{{image[1]}}">
 
     {%- endfor -%}

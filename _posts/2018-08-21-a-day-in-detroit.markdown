@@ -16,10 +16,10 @@ additional_images:
     image_6.jpg: Token selfie
     image_7.jpg: Nosebleed seats sometimes have the best view
 ---
-{% assign image_path = {{site.baseurl}} | append: {{site.images_directory}} | append: {{page.number}} |append: "/" %}
-{% assign image_2_path = {{image_path}} | append: {{page.image_2}%}
-{% assign image_3_path = {{image_path}} | append: {{page.image_3}%}
-{% assign image_7_path = {{image_path}} | append: {{page.image_7}%}
+{% assign image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/" %}
+{% assign image_2_path = image_path | append: page.image_2 %}
+{% assign image_3_path = image_path | append: page.image_3 %}
+{% assign image_7_path = image_path | append: page.image_7 %}
 
 
 Katie and I decided to take the day off an spend it in Detroit. We knew we wanted to go to a Tigers game, but we didn't really have a game plan.

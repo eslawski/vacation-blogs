@@ -27,14 +27,24 @@ $(function() {
 });
 
 function initializePage() {
+    // loadDeferredImages();
     initializeBlogImageClicks();
     initializeMobileMenu();
 }
 
+function loadDeferredImages() {
+    $(document).ready(function(){
+        $(".blog-image").each(function(index, element){
+            $(element).attr("src", $(element).attr("data-src"));
+        });
+    });
+}
+
 function initializeBlogImageClicks() {
     $('.blog-image').click(function(event) {
-        $("#image-modal").addClass("showing");
-        $('.modal-image').attr('src', event.target.src);
+        $('.modal-image').attr('src', event.target.src).on('load', function () {
+            $("#image-modal").addClass("showing");
+        });
         $('.modal-caption').html($(event.target).data("caption"));
     });
 
