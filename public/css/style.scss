@@ -16,6 +16,9 @@ p {
   color: #6C7A89;
 }
 
+/**
+ * Side bar for large screens. See mobile-menu.css for mobile version.
+ */
 .sidebar {
   color: rgba(255,255,255,.5);
   background-color: #202020;
@@ -86,158 +89,174 @@ p {
   }
 }
 
+/**
+ * Main content container
+ */
 .content {
   margin-left: $sidebar-width;
-
-  @media only screen and (max-width: 1024px) {
-    margin-left: 0;
-  }
-
-  .home {
-    .post-list-heading {
-      font-size: 3.5em;
-      margin: 10px 0 20px 10px;
-      text-transform: uppercase;
-    }
-
-    .post-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-auto-rows: 50vh;
-
-      @media only screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 40vh;
-      }
-
-      .post-entry-container {
-        position: relative;
-        overflow: hidden;
-
-        .post-entry-image {
-          height: 100%;
-          width: 100%;
-          background-size: cover;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          display: block;
-          transition: all 1s ease;
-          -webkit-transition: all 1s ease;
-
-          &:hover {
-            width: 105%;
-            height: 105%;
-          }
-        }
-
-        .post-entry-text {
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          padding: 0 0 20px 20px;
-          color: #fff;
-
-          .title {
-            font-size: 2.25rem;
-          }
-
-        }
-      }
-    }
-  }
-
-  .post {
-    .hero {
-      position: relative;
-      background-size: cover !important;
-      -webkit-background-size: cover !important;
-      -moz-background-size: cover !important;
-      text-align: center;
-      min-height: 500px;
-      letter-spacing: 2px;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      //&:after {
-      //  content: '';
-      //  display: block;
-      //  position: absolute;
-      //  left: 0;
-      //  right: 0;
-      //  top: 0;
-      //  bottom: 0;
-      //  background: rgba(127, 127, 127, 0.5);
-      //  background-image: radial-gradient(black 33%, transparent 33%);
-      //  background-size: 2px 2px;
-      //}
-
-      .post-number {
-        border-bottom: 2px solid #fff;
-        font-size: 2.5em;
-      }
-
-      .post-title {
-        font-size: 3em;
-      }
-    }
-
-    .post-content {
-      padding: 40px 60px 60px;
-
-      @media only screen and (max-width: 768px) {
-        padding: 40px 15px 60px;
-      }
-
-        .post-text {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-
-          p {
-            font-size: 1.25em;
-          }
-
-          .image-wrap {
-            align-items: center;
-            justify-content: center;
-            display: flex;
-
-            img {
-              max-width: 80%;
-            }
-          }
-      }
-
-      .post-date {
-        font-size: 2em;
-        font-weight: bold;
-        color: #000000;
-      }
-    }
-
-    .post-image {
-      width: 300px;
-      height: 225px;
-      background-size: cover;
-    }
-
-    .blog-image {
-      cursor: pointer;
-    }
-  }
-}
-
-.content {
   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 1s; /* Firefox < 16 */
   -ms-animation: fadein 1s; /* Internet Explorer */
   -o-animation: fadein 1s; /* Opera < 12.1 */
   animation: fadein 1s;
+
+  @media only screen and (max-width: 1024px) {
+    margin-left: 0;
+  }
 }
 
 
+/**
+ * Homepage (list of blogs)
+ */
+.home {
+  .post-list-heading {
+    font-size: 3.5em;
+    margin: 10px 0 20px 10px;
+    text-transform: uppercase;
+  }
+
+  .post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 50vh;
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 40vh;
+    }
+
+    .post-entry-container {
+      position: relative;
+      overflow: hidden;
+
+      .post-entry-image {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        display: block;
+        transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+
+        &:hover {
+          width: 105%;
+          height: 105%;
+        }
+      }
+
+      .post-entry-text {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0 0 20px 20px;
+        color: #fff;
+
+        .title {
+          font-size: 2.25rem;
+        }
+
+      }
+    }
+  }
+}
+
+/**
+ * Post page
+ */
+.post {
+  .hero {
+    position: relative;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    text-align: center;
+    min-height: 500px;
+    letter-spacing: 2px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .post-number {
+      border-bottom: 2px solid #fff;
+      font-size: 2.5em;
+    }
+
+    .post-title {
+      font-size: 3em;
+    }
+  }
+
+  .post-content {
+    padding: 40px 60px 60px;
+
+    @media only screen and (max-width: 768px) {
+      padding: 40px 15px 60px;
+    }
+
+    .post-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        font-size: 1.25em;
+      }
+
+      .image-wrap {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+        img {
+          max-width: 80%;
+        }
+      }
+    }
+
+    .post-date {
+      font-size: 2em;
+      font-weight: bold;
+      color: #000000;
+    }
+  }
+
+  .post-image {
+    width: 300px;
+    height: 225px;
+    background-size: cover;
+  }
+
+  .blog-image {
+    cursor: pointer;
+  }
+
+  .additional-images-title {
+    padding-left: 10px;
+  }
+
+  .additional-images {
+    line-height: 1;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    grid-gap: 3px 3px;
+
+  }
+
+  .additional-images img {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+
+/**
+ * Key frames for the fade in animation
+ */
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
@@ -268,9 +287,10 @@ p {
 }
 
 
-
-/* The Modal (background) */
-.modal {
+/**
+ * Image modal
+ */
+#image-modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -288,42 +308,21 @@ p {
   &.showing {
     display: flex;
   }
-}
 
-/* Modal Content (image) */
-.modal-content {
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
+  .modal-content {
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
 
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-.additional-images-title {
-  padding-left: 10px;
-}
-
-.additional-images {
-  line-height: 1;
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  grid-gap: 3px 3px;
-
-}
-
-.additional-images img {
-  /* Just in case there are inline attributes */
-  width: 100% !important;
-  height: auto !important;
+  .modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
 }
