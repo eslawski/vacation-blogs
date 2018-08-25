@@ -19,17 +19,21 @@ p {
 .sidebar {
   color: rgba(255,255,255,.5);
   background-color: #202020;
+  display: flex;
+  align-items: flex-end;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   width: $sidebar-width;
 
+  @media only screen and (max-width: 1024px) {
+    position: relative;
+    width: auto;
+  }
+
   .sidebar-sticky {
-    position: absolute;
-    right:  1rem;
-    bottom: 1rem;
-    left:   1rem;
+    padding: 20px;
   }
 
   .sidebar-about {
@@ -37,11 +41,26 @@ p {
       color: #fff;
       margin-top: 0;
       font-size: 3.25rem;
+      margin-bottom: 0;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 2.5em;
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      p {
+        margin: 0;
+      }
     }
   }
 
   .sidebar-nav {
     margin-bottom: 1rem;
+
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
 
     .sidebar-nav-item {
       display: block;
@@ -64,6 +83,9 @@ p {
 .content {
   margin-left: $sidebar-width;
 
+  @media only screen and (max-width: 1024px) {
+    margin-left: 0;
+  }
 
   .home {
     .post-list-heading {
@@ -75,7 +97,12 @@ p {
     .post-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-auto-rows: 400px;
+      grid-auto-rows: 50vh;
+
+      @media only screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 40vh;
+      }
 
       .post-entry-container {
         position: relative;
@@ -162,6 +189,11 @@ p {
           font-size: 1.25em;
           max-width: 80%;
         }
+
+        .blog-image {
+          max-width: 100%;
+          cursor: pointer;
+        }
       }
 
       .post-date {
@@ -177,4 +209,85 @@ p {
       background-size: cover;
     }
   }
+}
+
+.content {
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+  -ms-animation: fadein 1s; /* Internet Explorer */
+  -o-animation: fadein 1s; /* Opera < 12.1 */
+  animation: fadein 1s;
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+
+  &.showing {
+    display: flex;
+  }
+}
+
+/* Modal Content (image) */
+.modal-content {
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  padding-left: $sidebar-width;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
 }

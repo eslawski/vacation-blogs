@@ -44,4 +44,15 @@ $(function() {
         } );
     } );
 
+    // Setup blog image clicks
+    $('.blog-image').click(function(event) {
+       $("#image-modal").addClass("showing");
+        $('.modal-content').attr('src', event.target.src)
     });
+
+    $('#image-modal').click(function(event) {
+        if(event.target.id === "image-modal") {
+            $('#image-modal').removeClass("showing");
+        }
+    });
+});
