@@ -8,21 +8,23 @@ layout: default
 </div>
 
 <div class="post">
-  <div class="hero" style="background: url({{page.hero-image}}) no-repeat center center fixed">
+  <div class="hero"
+       style="background: linear-gradient(to bottom,rgba(22,27,33,.2) 0,rgba(22,27,33,.2) 100%),
+        url({{page.hero-image}}) no-repeat center center fixed">
     <div>
       <span class="post-number">{{page.number}}</span>
       <h1 class="post-title">{{page.title}}</h1>
     </div>
   </div>
   <div class="post-content">
-    <span class="post-date">{{ page.better_date }}</span>
+    <span class="post-date">{{ page.date | date_to_string: "ordinal", "US" }}</span>
     <div class="post-text">
       {{ content }}
     </div>
   </div>
 
   {%- if page.additional_images -%}
-  <h1>Additional Images</h1>
+  <h1 class="additional-images-title">Additional Images</h1>
   <div class="additional-images">
     {%- for image in page.additional_images -%}
     <img class="blog-image" src="{{image}}">
