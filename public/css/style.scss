@@ -33,6 +33,7 @@ body i {
   left: 0;
   bottom: 0;
   width: $sidebar-width;
+  background-size: cover;
 
   @media only screen and (max-width: 1024px) {
     position: relative;
