@@ -16,6 +16,10 @@ p {
   color: #6C7A89;
 }
 
+body i {
+  font-family: "Font Awesome 5 Brands" !important;
+}
+
 /**
  * Side bar for large screens. See mobile-menu.css for mobile version.
  */
@@ -359,5 +363,40 @@ p {
     color: #ccc;
     padding: 10px 0;
     text-align: center;
+  }
+}
+
+/**
+ * Social buttons. In either navbar or modal
+ */
+.socials {
+  display: flex;
+  padding-top: 15px;
+
+  .btn-social {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: rgba(255,255,255,.7);
+    text-align: center;
+    font-size: 25px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+}
+
+.hide-for-medium-down {
+  @media only screen and (max-width: 1024px) {
+    display: none !important;
+  }
+}
+
+.hide-for-medium-up {
+  @media only screen and (min-width: 1024px) {
+    display: none !important;
   }
 }

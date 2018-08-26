@@ -71,9 +71,11 @@
   -ms-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  padding-left: 40px;
 
   .menu-list-items {
     list-style: none;
+    padding-left: 0;
   }
 
   .menu-item {

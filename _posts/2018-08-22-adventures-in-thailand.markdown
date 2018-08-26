@@ -20,6 +20,7 @@ additional_images:
     image_10.jpg: Picture with Lola.
     image_11.jpg: Awesome pic of the valley
     image_12.jpg: Baby elephant spotting!
+    super_large.jpg: This is super large
 ---
 {% assign image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/" %}
 {% assign image_3_path = image_path | append: page.image_3 %}
