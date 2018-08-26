@@ -42,7 +42,10 @@ function loadDeferredImages() {
 
 function initializeBlogImageClicks() {
     $('.blog-image').click(function(event) {
+        var loader = $('<div class="loader"></div>');
+        $(event.target).parent().append(loader);
         $('.modal-image').attr('src', event.target.src).on('load', function () {
+            loader.remove();
             $("#image-modal").addClass("showing");
         });
         $('.modal-caption').html($(event.target).data("caption"));

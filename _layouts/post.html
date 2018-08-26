@@ -30,7 +30,7 @@ layout: default
   <div class="additional-images">
     {%- for image in page.additional_images -%}
     {% assign image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/" | append: image[0] %}
-    <img class="blog-image" src="{{image_path}}" data-caption="{{image[1]}}">
+    <div class="image-wrap"><img class="blog-image" src="{{image_path}}" data-caption="{{image[1]}}"></div>
 
     {%- endfor -%}
   </div>
