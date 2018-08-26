@@ -3,6 +3,7 @@
 ---
 
 $sidebar-width: 25vw;
+$mobile-sidebar-height: 75px;
 
 html, body {
   margin: 0;
@@ -36,9 +37,12 @@ body i {
   background-size: cover;
 
   @media only screen and (max-width: 1024px) {
-    position: relative;
-    width: auto;
+    width: 100%;
+    height: $mobile-sidebar-height;
     align-items: center;
+    position: fixed;
+    padding-top: 20px;
+    z-index: 50;
 
     .sidebar-sticky {
       position: relative;
@@ -106,6 +110,7 @@ body i {
 
   @media only screen and (max-width: 1024px) {
     margin-left: 0;
+    padding-top: $mobile-sidebar-height;
   }
 }
 
@@ -405,6 +410,10 @@ body i {
 
 .image-wrap {
   position: relative;
+
+  &.panoramic {
+    column-span: all;
+  }
 }
 
 .loader {

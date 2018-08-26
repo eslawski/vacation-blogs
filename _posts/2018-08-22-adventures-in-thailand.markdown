@@ -8,6 +8,7 @@ image_2: image_2.jpg
 image_3: image_3.jpg
 image_9: image_9.jpg
 additional_images:
+    pano_1.jpg: Pano test1
     image_1.jpg: A view from the beach near the Wagner Condo
     image_2.jpg: Eating dinner at Mick's house
     image_3.jpg: View over Pattaya

@@ -31,7 +31,12 @@ layout: default
     {%- for image in page.additional_images -%}
         {% assign low_res_image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/low_res/" | append: image[0] %}
         {% assign high_res_image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/high_res/" | append: image[0] %}
-        <div class="image-wrap"><img class="blog-image" src="{{low_res_image_path}}" data-hr-src="{{high_res_image_path}}" data-caption="{{image[1]}}"></div>
+        <div class="image-wrap {% if image[0] contains 'pano' %} panoramic {% endif %}">
+            <img class="blog-image"
+                 src="{{low_res_image_path}}"
+                 data-hr-src="{{high_res_image_path}}"
+                 data-caption="{{image[1]}}">
+        </div>
     {%- endfor -%}
   </div>
   {%- endif -%}
