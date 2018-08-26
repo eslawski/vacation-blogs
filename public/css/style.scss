@@ -21,20 +21,18 @@ body i {
   font-family: "Font Awesome 5 Brands" !important;
 }
 
+
+
+
 /**
  * Side bar for large screens. See mobile-menu.css for mobile version.
  */
 .sidebar {
-  color: rgba(255,255,255,.5);
-  background-color: #202020;
-  display: flex;
-  align-items: flex-end;
   position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
   width: $sidebar-width;
-  background-size: cover;
+  background-color: #202020;
+  bottom: 0;
+  top: 0;
 
   @media only screen and (max-width: 1024px) {
     width: 100%;
@@ -43,15 +41,44 @@ body i {
     position: fixed;
     padding-top: 20px;
     z-index: 50;
+  }
 
-    .sidebar-sticky {
-      position: relative;
-      width: 100%;
+  .sidebar-image {
+    width: $sidebar-width;
+    position: fixed;
+    opacity: 0;
+    background-size: cover !important;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -ms-transition: opacity .4s ease-in-out;
+    -o-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+
+    &.about {
+      background: linear-gradient(
+                      rgba(0, 0, 0, .4),
+                      rgba(0, 0, 0, .4)
+      ), url("/public/images/profile_pic_resized.jpg")
+    }
+
+    &.make-visible {
+      opacity: 1;
     }
   }
 
-  .sidebar-sticky {
+  .sidebar-content {
+    color: rgba(255,255,255,.5);
     margin: 20px;
+    position: absolute;
+    bottom: 0;
+
+    @media only screen and (max-width: 1024px) {
+      position: relative;
+      margin: 0 0 0 20px;
+    }
   }
 
   .sidebar-about {

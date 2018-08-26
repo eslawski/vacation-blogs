@@ -28,8 +28,16 @@ $(function() {
 
 function initializePage() {
     // loadDeferredImages();
+
+    changeSidebar()
     initializeBlogImageClicks();
     initializeMobileMenu();
+}
+
+function changeSidebar() {
+    setTimeout(function() {
+        $('.sidebar-image.active').addClass('make-visible');
+    }, 500);
 }
 
 function loadDeferredImages() {
