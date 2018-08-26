@@ -29,9 +29,9 @@ layout: default
   <h1 class="additional-images-title">Additional Images</h1>
   <div class="additional-images">
     {%- for image in page.additional_images -%}
-    {% assign image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/" | append: image[0] %}
-    <div class="image-wrap"><img class="blog-image" src="{{image_path}}" data-caption="{{image[1]}}"></div>
-
+        {% assign low_res_image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/low_res/" | append: image[0] %}
+        {% assign high_res_image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/high_res/" | append: image[0] %}
+        <div class="image-wrap"><img class="blog-image" src="{{low_res_image_path}}" data-hr-src="{{high_res_image_path}}" data-caption="{{image[1]}}"></div>
     {%- endfor -%}
   </div>
   {%- endif -%}
