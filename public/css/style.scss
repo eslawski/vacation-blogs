@@ -445,6 +445,7 @@ body.modal-opened {
 
     p {
       font-size: 1.25em;
+      align-self: start;
 
       @media only screen and (max-width: 768px) {
         font-size: 16px;
