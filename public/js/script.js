@@ -37,6 +37,7 @@ function heroImageTesting() {
 function initializePage() {
     // loadDeferredImages();
 
+    $(window).scrollTop(0);
     changeSidebar();
     initializeBlogImageClicks();
     initializeMobileMenu();
