@@ -21,7 +21,7 @@ additional_images:
     image_10.jpg: Picture with Lola.
     image_11.jpg: Awesome pic of the valley
 ---
-{% assign image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/low_res/" %}
+{% assign image_path = site.images_directory | append: page.number |append: "/low_res/" %}
 {% assign image_3_path = image_path | append: page.image_3 %}
 {% assign image_2_path = image_path | append: page.image_2 %}
 {% assign image_9_path = image_path | append: page.image_9 %}

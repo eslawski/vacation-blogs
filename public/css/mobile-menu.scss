@@ -100,6 +100,11 @@
       &:hover {
         color: #fff;
       }
+
+      &.active {
+        font-weight: bold;
+        color: #42a9ef;
+      }
     }
   }
 }

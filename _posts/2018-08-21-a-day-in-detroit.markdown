@@ -16,7 +16,7 @@ additional_images:
     image_6.jpg: Token selfie
     image_7.jpg: Nosebleed seats sometimes have the best view
 ---
-{% assign image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/low_res/" %}
+{% assign image_path = site.images_directory | append: page.number |append: "/low_res/" %}
 {% assign image_2_path = image_path | append: page.image_2 %}
 {% assign image_3_path = image_path | append: page.image_3 %}
 {% assign image_7_path = image_path | append: page.image_7 %}

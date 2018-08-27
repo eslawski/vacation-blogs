@@ -126,8 +126,9 @@ body.modal-opened {
         text-decoration: underline;
       }
 
-      .active {
+      &.active {
         font-weight: bold;
+        color: #42a9ef;
       }
     }
   }

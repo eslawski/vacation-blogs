@@ -8,7 +8,7 @@ layout: default
 </div>
 
 <div class="post">
-  {% assign hero_image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/" | append: page.hero_image %}
+  {% assign hero_image_path = site.images_directory | append: page.number |append: "/" | append: page.hero_image %}
 
   <div class="hero"
        style="background: linear-gradient(to bottom,rgba(22,27,33,.5) 0,rgba(22,27,33,.5) 100%),
@@ -29,7 +29,7 @@ layout: default
   <h1 class="additional-images-title">Additional Images</h1>
   <div class="additional-images">
     {%- for image in page.additional_images -%}
-        {% assign image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/low_res/" | append: image[0] %}
+        {% assign image_path = site.images_directory | append: page.number |append: "/low_res/" | append: image[0] %}
         <div class="image-wrap {% if image[0] contains 'pano' %} panoramic {% endif %}">
             <img class="blog-image"
                  data-src="{{image_path}}"
