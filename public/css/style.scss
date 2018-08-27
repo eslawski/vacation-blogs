@@ -21,8 +21,10 @@ body i {
   font-family: "Font Awesome 5 Brands" !important;
 }
 
-
-
+body.modal-opened {
+  // prevents background scrolling when modal opened
+  overflow: hidden;
+}
 
 /**
  * Side bar for large screens. See mobile-menu.css for mobile version.

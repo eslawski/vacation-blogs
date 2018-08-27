@@ -57,6 +57,7 @@ function loadDeferredImages() {
 }
 
 function initializeBlogImageClicks() {
+    $('body').removeClass('modal-opened');
     $('.blog-image').click(function(event) {
         var loader = $('<div class="loader"></div>');
         var imageComponent = $(event.target);
@@ -65,6 +66,7 @@ function initializeBlogImageClicks() {
         $('.modal-image').attr('src', highResImagePath).on('load', function () {
             loader.remove();
             $("#image-modal").addClass("showing");
+            $('body').addClass('modal-opened');
         });
         $('.modal-caption').html($(event.target).data("caption"));
     });
@@ -72,6 +74,9 @@ function initializeBlogImageClicks() {
     $('#image-modal').click(function(event) {
         if(event.target.id === "image-modal") {
             $('#image-modal').removeClass("showing");
+            $('body').removeClass('modal-opened');
+            $('.modal-caption').html("");
+
         }
     });
 }
