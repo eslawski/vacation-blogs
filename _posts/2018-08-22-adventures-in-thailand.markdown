@@ -44,8 +44,11 @@ essentially tortured in captivity their entire lives for the pleasure of humans.
 
 We happened to visit "Elephant Nature Park" which is a elephant sanctuary that rescues these creatures. This is some more filler so that it wraps to the next line. And look how easy it was to embed a video.
 
-<iframe width="600" height="400"
-    src="https://www.youtube.com/embed/tgbNymZ7vqY">
-</iframe>
-
+<div class="video-container">
+<div class="video-wrapper">
+    <iframe width="560" height="349"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </iframe>
+</div>
+</div>
 Overall it was an amazing trip with way more details that I will leave out of this sample blog post for now! This is some more filler so that it wraps to the next line.
