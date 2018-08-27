@@ -26,10 +26,18 @@ $(function() {
     } );
 });
 
+function heroImageTesting() {
+    var img = new Image();
+    img.onload = function() {
+        debugger;
+    };
+    img.src = "/public/images/01/hero_image.jpg";
+}
+
 function initializePage() {
     // loadDeferredImages();
 
-    changeSidebar()
+    changeSidebar();
     initializeBlogImageClicks();
     initializeMobileMenu();
 }

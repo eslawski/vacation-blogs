@@ -38,9 +38,7 @@ body i {
     width: 100%;
     height: $mobile-sidebar-height;
     align-items: center;
-    position: fixed;
-    padding-top: 20px;
-    z-index: 50;
+    position: relative;
   }
 
   .sidebar-image {
@@ -81,7 +79,8 @@ body i {
 
     @media only screen and (max-width: 1024px) {
       position: relative;
-      margin: 0 0 0 20px;
+      margin: 0;
+      padding: 10px 0 0 10px;
     }
   }
 
@@ -99,6 +98,10 @@ body i {
 
     p {
       margin: 0 0 20px 0;
+    }
+
+    .lead {
+      color: #A9B1BA;
     }
   }
 
@@ -141,7 +144,6 @@ body i {
 
   @media only screen and (max-width: 1024px) {
     margin-left: 0;
-    padding-top: $mobile-sidebar-height;
   }
 }
 
@@ -194,10 +196,11 @@ body i {
         color: #fff;
 
         .title {
+          font-weight: 500;
           font-size: 2.25rem;
 
           @media only screen and (max-width: 768px) {
-            font-size: 1.5em;
+            font-size: 1.75em;
           }
         }
 
@@ -230,6 +233,7 @@ body i {
     .post-number {
       border-bottom: 2px solid #fff;
       font-size: 2.5em;
+      font-weight: 900;
     }
 
     .post-title {
@@ -376,6 +380,10 @@ body i {
     justify-content: center;
     text-decoration: none;
     margin-right: 15px;
+
+    &:hover {
+      background-color: #fff;
+    }
   }
 }
 

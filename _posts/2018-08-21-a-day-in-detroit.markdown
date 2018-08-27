@@ -26,17 +26,17 @@ additional_images:
 Katie and I decided to take the day off an spend it in Detroit. We knew we wanted to go to a Tigers game, but we didn't really have a game plan.
 We took off around 1pm and made it to Detroit around 2pm. First stop, Atwater Brewery! We got to enjoy an awesome summer day on their second level beer garden.
 
-<div class="image-wrap"><img class="blog-image" src="{{image_2_path}}""></div>
+<div class="image-wrap"><img class="blog-image" src="{{image_2_path}}"></div>
 
 From there we drove the Corktown to check out Two James Distillery. We had some trouble finding it at first because it is hidden off the main road.
 They had the garage door opened up, and we pretty much had the place to ourselves. The drinks were really great, but they were on the pricier side
 and took like 10 minutes to make.
 
-<div class="image-wrap"><img class="blog-image" src="{{image_3_path}}""></div>
+<div class="image-wrap"><img class="blog-image" src="{{image_3_path}}"></div>
 
 After that we headed downtown for some dinner. We did a bit of bar hopping before the game, so needless to say we were feeling pretty good come gametime.
 We got to the game a little early and managed to score a free coozie!
 
-<div class="image-wrap"><img class="blog-image" src="{{image_7_path}}""></div>
+<div class="image-wrap"><img class="blog-image" src="{{image_7_path}}"></div>
 
 The Tigers of course lost the game, but we had a fun time either way!
