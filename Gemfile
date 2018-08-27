@@ -8,14 +8,17 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.8.3"
+# gem "jekyll", "~> 3.8.3"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.0"
 
+# IMPORTANT! - Comment by Me. Apparently Jekyll locks the version it will use a couple lines above. Github pages
+# does not necessarily use this version which could lead to totally generic errors. Enabling this line below you
+# will get the exact version github uses so you can replicate the build exactly.
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
+gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do

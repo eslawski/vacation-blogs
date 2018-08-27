@@ -12,14 +12,14 @@ layout: default
 
   <div class="hero"
        style="background: linear-gradient(to bottom,rgba(22,27,33,.5) 0,rgba(22,27,33,.5) 100%),
-        url({{hero_image_path}}) no-repeat center center fixed">
+        url({{hero_image_path}}) no-repeat center center fixed;">
     <div>
       <span class="post-number">{{page.number}}</span>
       <h1 class="post-title">{{page.title}}</h1>
     </div>
   </div>
   <div class="page">
-    <span class="page-heading">{{ page.date | date_to_string: "ordinal", "US" }}</span>
+    <span class="page-heading">{{ page.date | date_to_string }}</span>
     <div class="page-body">
       {{ content }}
     </div>

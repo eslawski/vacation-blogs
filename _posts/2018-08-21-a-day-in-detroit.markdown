@@ -1,7 +1,7 @@
 ---
 layout: post
 number: "00"
-title:  A Day In Detroit
+title:  "A Day In Detroit"
 entry_image: entry_image.jpg
 hero_image: hero_image.jpg
 image_2: image_2.jpg

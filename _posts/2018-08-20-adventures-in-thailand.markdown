@@ -1,7 +1,7 @@
 ---
 layout: post
 number: "01"
-title:  Adventures in Thailand
+title: "Adventures in Thailand"
 entry_image: entry_image.jpg
 hero_image: hero_image.jpg
 image_2: image_2.jpg
