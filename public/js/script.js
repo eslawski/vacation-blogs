@@ -26,21 +26,13 @@ $(function() {
     } );
 });
 
-function heroImageTesting() {
-    var img = new Image();
-    img.onload = function() {
-        debugger;
-    };
-    img.src = "/public/images/01/hero_image.jpg";
-}
-
 function initializePage() {
-    // loadDeferredImages();
-
     $(window).scrollTop(0);
     changeSidebar();
     initializeBlogImageClicks();
     initializeMobileMenu();
+    loadDeferredImages();
+
 }
 
 function changeSidebar() {
@@ -50,10 +42,8 @@ function changeSidebar() {
 }
 
 function loadDeferredImages() {
-    $(document).ready(function(){
-        $(".blog-image").each(function(index, element){
-            $(element).attr("src", $(element).attr("data-src"));
-        });
+    $(".blog-image").each(function(index, element){
+        $(element).attr("src", $(element).attr("data-src"));
     });
 }
 

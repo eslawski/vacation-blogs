@@ -32,7 +32,7 @@ layout: default
         {% assign image_path = site.baseurl | append: site.images_directory | append: page.number |append: "/low_res/" | append: image[0] %}
         <div class="image-wrap {% if image[0] contains 'pano' %} panoramic {% endif %}">
             <img class="blog-image"
-                 src="{{image_path}}"
+                 data-src="{{image_path}}"
                  data-caption="{{image[1]}}">
         </div>
     {%- endfor -%}
