@@ -1,29 +1,29 @@
 $(function() {
     initializePage();
 
-    var $wrap = $( "#wrap" );
-    $wrap.on( "click", ".page-link", function( event ) {
-        event.preventDefault();
-        if ( window.location === this.href ) {
-            return;
-        }
-        // Could update the page title here
-        History.pushState( null, "", this.href );
-    } );
-
-    History.Adapter.bind( window, "statechange", function() {
-        var state = History.getState();
-        $.get( state.url, function( res ) {
-            $.each( $( res ), function( index, elem ) {
-                if ( $wrap.selector !== "#" + elem.id ) {
-                    return;
-                }
-                $wrap.html($(elem).html());
-                initializePage();
-            } );
-
-        } );
-    } );
+    // var $wrap = $( "#wrap" );
+    // $wrap.on( "click", ".page-link", function( event ) {
+    //     event.preventDefault();
+    //     if ( window.location === this.href ) {
+    //         return;
+    //     }
+    //     // Could update the page title here
+    //     History.pushState( null, "", this.href );
+    // } );
+    //
+    // History.Adapter.bind( window, "statechange", function() {
+    //     var state = History.getState();
+    //     $.get( state.url, function( res ) {
+    //         $.each( $( res ), function( index, elem ) {
+    //             if ( $wrap.selector !== "#" + elem.id ) {
+    //                 return;
+    //             }
+    //             $wrap.html($(elem).html());
+    //             initializePage();
+    //         } );
+    //
+    //     } );
+    // } );
 });
 
 function initializePage() {
