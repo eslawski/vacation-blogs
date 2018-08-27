@@ -42,8 +42,10 @@ One of the highlights of the trip was going to see the elephants. When we tell p
 And we always proudly responded with "No"! We learned on this trip how poorly treated elephants are by tourists. They are
 essentially tortured in captivity their entire lives for the pleasure of humans.
 
-We happened to visit "Elephant Nature Park" which is a elephant sanctuary that rescues these creatures.
+We happened to visit "Elephant Nature Park" which is a elephant sanctuary that rescues these creatures. This is some more filler so that it wraps to the next line. And look how easy it was to embed a video.
 
-<div class="image-wrap"><img class="blog-image" src="{{image_9_path}}"></div>
+<iframe width="600" height="400"
+    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
 
-Overall it was an amazing trip with way more details that I will leave out of this sample blog post for now!
+Overall it was an amazing trip with way more details that I will leave out of this sample blog post for now! This is some more filler so that it wraps to the next line.
