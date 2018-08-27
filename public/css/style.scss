@@ -481,6 +481,10 @@ body.modal-opened {
   width: 80%;
   max-width: 640px;
   margin: 0 auto;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .video-wrapper {
