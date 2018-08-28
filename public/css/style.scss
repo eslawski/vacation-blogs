@@ -139,17 +139,16 @@ body.modal-opened {
  */
 .content {
   margin-left: $sidebar-width;
-  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 1s; /* Firefox < 16 */
-  -ms-animation: fadein 1s; /* Internet Explorer */
-  -o-animation: fadein 1s; /* Opera < 12.1 */
-  animation: fadein 1s;
+  //-webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  //-moz-animation: fadein 1s; /* Firefox < 16 */
+  //-ms-animation: fadein 1s; /* Internet Explorer */
+  //-o-animation: fadein 1s; /* Opera < 12.1 */
+  //animation: fadein 1s;
 
   @media only screen and (max-width: 1024px) {
     margin-left: 0;
   }
 }
-
 
 /**
  * Homepage (list of blogs)
@@ -216,21 +215,43 @@ body.modal-opened {
  * Post page
  */
 .post {
-  .hero {
+  .hero-wrapper {
     position: relative;
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
     text-align: center;
     height: 80vh;
     letter-spacing: 2px;
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
 
     @media only screen and (max-width: 1024px) {
       height: 60vh;
+    }
+
+    .hero {
+      background-size: cover !important;
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      opacity: 1;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      -webkit-transition: opacity .5s ease-in-out;
+      -moz-transition: opacity .5s ease-in-out;
+      -o-transition: opacity .5s ease-in-out;
+      transition: opacity .5s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &.high-res {
+        z-index: 5;
+      }
+
+      &.hidden {
+        opacity: 0;
+      }
     }
 
     .post-number {

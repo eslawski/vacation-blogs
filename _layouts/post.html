@@ -9,13 +9,16 @@ layout: default
 
 <div class="post">
   {% assign hero_image_path = site.images_directory | append: page.number |append: "/" | append: page.hero_image %}
+  {% assign hero_image_path_blurry = site.images_directory | append: page.number |append: "/" | append: page.hero_image_blurry %}
 
-  <div class="hero"
-       style="background: linear-gradient(to bottom,rgba(22,27,33,.5) 0,rgba(22,27,33,.5) 100%),
-        url({{hero_image_path}}) no-repeat center center fixed;">
-    <div>
-      <span class="post-number">{{page.number}}</span>
-      <h1 class="post-title">{{page.title}}</h1>
+
+    <div class="hero-wrapper">
+       <div class="hero blurry" style="background: linear-gradient(to bottom,rgba(22,27,33,.5) 0,rgba(22,27,33,.5) 100%) , url({{hero_image_path_blurry}}) no-repeat center center fixed;"></div>
+       <div class="hero high-res hidden" style="background: linear-gradient(to bottom,rgba(22,27,33,.5) 0,rgba(22,27,33,.5) 100%), url({{hero_image_path}}) no-repeat center center fixed;">
+           <span class="post-number">{{page.number}}</span>
+           <h1 class="post-title">{{page.title}}</h1>
+       </div>
+      <div>
     </div>
   </div>
   <div class="page">

@@ -1,6 +1,9 @@
 $(function() {
     initializePage();
 
+    setTimeout(function() {
+        $('.hero.high-res').removeClass('hidden')
+    }, 750);
 
 });
 

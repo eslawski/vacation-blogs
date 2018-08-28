@@ -3,8 +3,7 @@ layout: post
 number: "00"
 title:  "A Day In Detroit"
 entry_image: entry_image.jpg
-hero_image: hero_image.jpg
-hero_image_blurry: hero_image_blur.jpg
+hero_image: hero_image_blur.jpg
 image_2: image_2.jpg
 image_3: image_3.jpg
 image_7: image_7.jpg
