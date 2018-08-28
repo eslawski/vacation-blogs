@@ -35,7 +35,6 @@ function fancyAjaxLoading() {
 }
 
 function initializePage() {
-    $(window).scrollTop(0);
     changeSidebar();
     initializeBlogImageClicks();
     initializeMobileMenu();
@@ -71,11 +70,10 @@ function initializeBlogImageClicks() {
     });
 
     $('#image-modal').click(function(event) {
-        if(event.target.id === "image-modal") {
+        if(!event.target.className.includes("modal-image")) {
             $('#image-modal').removeClass("showing");
             $('body').removeClass('modal-opened');
             $('.modal-caption').html("");
-
         }
     });
 }

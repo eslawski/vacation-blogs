@@ -17,10 +17,6 @@ p {
   color: #6C7A89;
 }
 
-body i {
-  font-family: "Font Awesome 5 Brands" !important;
-}
-
 body.modal-opened {
   // prevents background scrolling when modal opened
   overflow: hidden;
@@ -345,6 +341,20 @@ body.modal-opened {
     align-items: center;
   }
 
+  .close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgba(255,255,255,.7);
+    font-size: 50px;
+    padding: 50px 50px 0 0;
+
+    @media only screen and (max-width: 1024px) {
+      padding: 30px 30px 0 0;
+      font-size: 40px;
+    }
+  }
+
   .modal-image {
     display: block;
     max-width: 80%;
@@ -386,6 +396,10 @@ body.modal-opened {
 
     &:hover {
       background-color: #fff;
+    }
+
+    i {
+      font-family: "Font Awesome 5 Brands" !important;
     }
   }
 }
