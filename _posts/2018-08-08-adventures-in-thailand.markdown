@@ -2,8 +2,8 @@
 layout: post
 number: "01"
 title: "Adventures in Thailand"
-entry_image: entry_2.jpg
-hero_image: hero_2.jpg
+entry_image: entry_14.jpg
+hero_image: hero_14.jpg
 image_2: image_2.jpg
 image_3: image_3.jpg
 image_9: image_9.jpg
