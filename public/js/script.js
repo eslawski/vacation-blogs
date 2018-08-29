@@ -43,11 +43,14 @@ function initializePage() {
 
 }
 
+/**
+ * On the homepage behind the scenes I preload all the hero images so they are in the cache
+ * and ready to go when the user clicks on a post.
+ */
 function preloadHeroImages(){
     $('.post-entry-image').each(function(index, element) {
         var heroImagePath = $(element).data("heroImageSrc");
         if(heroImagePath) {
-            console.log(heroImagePath);
             var img = new Image();
             img.src = heroImagePath;
         }
