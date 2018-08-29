@@ -36,10 +36,22 @@ function fancyAjaxLoading() {
 
 function initializePage() {
     changeSidebar();
+    preloadHeroImages();
     initializeBlogImageClicks();
     initializeMobileMenu();
     loadDeferredImages();
 
+}
+
+function preloadHeroImages(){
+    $('.post-entry-image').each(function(index, element) {
+        var heroImagePath = $(element).data("heroImageSrc");
+        if(heroImagePath) {
+            console.log(heroImagePath);
+            var img = new Image();
+            img.src = heroImagePath;
+        }
+    });
 }
 
 function changeSidebar() {
