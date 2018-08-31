@@ -4,6 +4,8 @@
 
 $sidebar-width: 25vw;
 $mobile-sidebar-height: 75px;
+$desktop-hero-height: 80vh;
+$mobile-hero-height: 60vh;
 
 html, body {
   margin: 0;
@@ -212,21 +214,39 @@ body.modal-opened {
  * Post page
  */
 .post {
+  .page {
+    background-color: #fff; // accomplished fixed hero image effect
+  }
+
   .hero {
     position: relative;
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
     text-align: center;
-    height: 80vh;
     letter-spacing: 2px;
     color: #fff;
+    height: $desktop-hero-height;
     display: flex;
     align-items: center;
     justify-content: center;
 
     @media only screen and (max-width: 1024px) {
-      height: 60vh;
+      height: $mobile-hero-height;
+    }
+
+    .placeholder-image {
+      transform: scale(1);
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      width: 100vw - $sidebar-width;
+      height: $desktop-hero-height;
+      background-size: cover !important;
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      background-position: center;
+
+      @media only screen and (max-width: 1024px) {
+        width: 100vw;
+      }
     }
 
     .post-number {
@@ -265,6 +285,9 @@ body.modal-opened {
     column-count: 3;
     grid-gap: 3px 3px;
 
+    @media only screen and (max-width: 768px){
+      margin: 0 -15px;
+    }
   }
 
   .additional-images img {
@@ -521,12 +544,17 @@ body.modal-opened {
 
 .placeholder-image {
   filter: blur(5px);
+
   transition: 1s filter linear;
   -webkit-transition: 1s -webkit-filter linear;
   -moz-transition: 1s -moz-filter linear;
   -ms-transition: 1s -ms-filter linear;
   -o-transition: 1s -o-filter linear;
   transform: scale(1.1); // Removes white border around image when blurred
+
+  &.hero {
+    transform: scale(1);
+  }
 }
 .placeholder-image.enhanced {
   filter: blur(0px);

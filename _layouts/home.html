@@ -8,7 +8,6 @@ layout: default
         {%- for post in site.posts -%}
         <div class="post-entry-container">
             {% assign entry_image_path = site.images_directory | append: post.number | append: "/" | append: post.entry_image %}
-            {% assign hero_image_to_preload = site.images_directory | append: post.number | append: "/" | append: post.hero_image %}
             <a class="page-link post-entry-image placeholder-image"
                    href="{{ post.url | relative_url }}"
                    data-high-res-image-path="{{entry_image_path}}"
