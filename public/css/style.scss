@@ -550,6 +550,7 @@ body.modal-opened {
   -moz-transition: 1s -moz-filter ease;
   -ms-transition: 1s -ms-filter ease;
   -o-transition: 1s -o-filter ease;
+  transform: scale(1.03);
 }
 .placeholder-image.enhanced {
   filter: blur(0px);
