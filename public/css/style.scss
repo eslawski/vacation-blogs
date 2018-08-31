@@ -551,9 +551,6 @@ body.modal-opened {
   -ms-transition: 1s -ms-filter ease;
   -o-transition: 1s -o-filter ease;
   transform: scale(1.03);
-  -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
 }
 .placeholder-image.enhanced {
   filter: blur(0px);
