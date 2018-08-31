@@ -12,9 +12,11 @@ layout: default
             <a class="page-link post-entry-image placeholder-image"
                    href="{{ post.url | relative_url }}"
                    data-high-res-image-path="{{entry_image_path}}"
-                   style="background-image: url({{post.thumbnail}})">
+                   style="background-image: linear-gradient(to bottom,rgba(22,27,33,0) 0,
+                                                    rgba(22,27,33,.01) 1%,
+                                                    rgba(22,27,33,.2) 70%,
+                                                    rgba(22,27,33,.7) 100%), url({{post.thumbnail}})">
             </a>
-            <div class="post-entry-overlay"></div>
             <div class="post-entry-text">
                 <div class="date">{{ post.date | date_to_string }}</div>
                 <div class="title">{{post.title}}</div>
