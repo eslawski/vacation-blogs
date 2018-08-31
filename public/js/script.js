@@ -74,7 +74,9 @@ function enhanceImages() {
                 // probably because of weird caching issues with localhost.
                 var currentBackground = $(element).css('background-image');
                 $element.css('background-image', currentBackground.replace(/url\([^)]*\)/gi, "url("+sharpenedImagePath+")"));
-                $element.addClass('enhanced');
+                setTimeout(function() {
+                    $element.addClass('enhanced');
+                }, 50);
             };
             img.src = sharpenedImagePath;
         }
