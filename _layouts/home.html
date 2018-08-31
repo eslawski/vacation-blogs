@@ -13,7 +13,8 @@ layout: default
                    href="{{ post.url | relative_url }}"
                    data-high-res-image-path="{{entry_image_path}}"
                    style="background-image: url({{post.thumbnail}})">
-                </a>
+            </a>
+            <div class="post-entry-overlay"></div>
             <div class="post-entry-text">
                 <div class="date">{{ post.date | date_to_string }}</div>
                 <div class="title">{{post.title}}</div>

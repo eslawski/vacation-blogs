@@ -84,6 +84,9 @@ function enhanceImages() {
         if(sharpenedImagePath) {
             var img = new Image();
             img.onload = function() {
+                // IMPORTANT: For some reason on localhost setting the background image this way retrieves the
+                // background image again and causes this weird flickering. This does not happen on production.
+                // probably because of weird caching issues with localhost.
                 $element.css('background-image', 'url(' + sharpenedImagePath + ')');
                 $element.addClass('enhanced');
             };
