@@ -181,8 +181,8 @@ body.modal-opened {
         -webkit-background-size: cover;
         -moz-background-size: cover;
         display: block;
-        transition: width 1s ease, height 1s ease;
-        -webkit-transition: width 1s ease, height 1s ease;
+        transition: width 1s ease, height 1s ease, 1s filter linear;
+        -webkit-transition: width 1s ease, height 1s ease, 1s -webkit-filter linear;
 
         &:hover {
           width: 105%;
@@ -234,7 +234,6 @@ body.modal-opened {
     }
 
     .placeholder-image {
-      transform: scale(1);
       position: fixed;
       z-index: -1;
       top: 0;
@@ -551,11 +550,6 @@ body.modal-opened {
   -moz-transition: 1s -moz-filter linear;
   -ms-transition: 1s -ms-filter linear;
   -o-transition: 1s -o-filter linear;
-  transform: scale(1.1); // Removes white border around image when blurred
-
-  &.hero {
-    transform: scale(1);
-  }
 }
 .placeholder-image.enhanced {
   filter: blur(0px);
