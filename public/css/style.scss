@@ -29,6 +29,7 @@ body.modal-opened {
  */
 .sidebar {
   position: fixed;
+  z-index: 100;
   width: $sidebar-width;
   background-color: #202020;
   bottom: 0;
