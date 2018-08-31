@@ -4,37 +4,8 @@ $(function() {
 
 });
 
-/**
- * Fancy ajax loading functionality that would prevent the page from reloading. This is currently not being used
- * however if you do want to use it again you need to renable history.js in the <head>
- */
-function fancyAjaxLoading() {
-    var $wrap = $( "#wrap" );
-    $wrap.on( "click", ".page-link", function( event ) {
-        event.preventDefault();
-        if ( window.location === this.href ) {
-            return;
-        }
-        // Could update the page title here
-        History.pushState( null, "", this.href );
-    } );
-
-    History.Adapter.bind( window, "statechange", function() {
-        var state = History.getState();
-        $.get( state.url, function( res ) {
-            $.each( $( res ), function( index, elem ) {
-                if ( $wrap.selector !== "#" + elem.id ) {
-                    return;
-                }
-                $wrap.html($(elem).html());
-                initializePage();
-            } );
-
-        } );
-    } );
-}
-
 function initializePage() {
+    enhanceImages();
     changeSidebar();
     preloadHeroImages();
     initializeBlogImageClicks();
@@ -102,5 +73,21 @@ function initializeMobileMenu() {
     // Menu toggle
     $('.menu-item').click(function() {
         $('body').toggleClass("menu-open");
+    });
+}
+
+function enhanceImages() {
+    $('.placeholder-image').each(function(index, element) {
+        var $element = $(element);
+        var sharpenedImagePath = $element.data("highResImagePath");
+
+        if(sharpenedImagePath) {
+            var img = new Image();
+            img.onload = function() {
+                $element.css('background-image', 'url(' + sharpenedImagePath + ')');
+                $element.addClass('enhanced');
+            };
+            img.src = sharpenedImagePath;
+        }
     });
 }

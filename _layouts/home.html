@@ -9,14 +9,10 @@ layout: default
         <div class="post-entry-container">
             {% assign entry_image_path = site.images_directory | append: post.number | append: "/" | append: post.entry_image %}
             {% assign hero_image_to_preload = site.images_directory | append: post.number | append: "/" | append: post.hero_image %}
-            <a class="page-link post-entry-image"
+            <a class="page-link post-entry-image placeholder-image"
                    href="{{ post.url | relative_url }}"
-                   data-hero-image-src="{{hero_image_to_preload}}"
-                   style="background-image: linear-gradient(to bottom,rgba(22,27,33,0) 0,
-                                                    rgba(22,27,33,.01) 1%,
-                                                    rgba(22,27,33,.2) 70%,
-                                                    rgba(22,27,33,.7) 100%),
-                                                     url({{entry_image_path}})">
+                   data-high-res-image-path="{{entry_image_path}}"
+                   style="background-image: url({{post.thumbnail}})">
                 </a>
             <div class="post-entry-text">
                 <div class="date">{{ post.date | date_to_string }}</div>

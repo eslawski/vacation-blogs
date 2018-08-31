@@ -518,3 +518,16 @@ body.modal-opened {
   width:100%;
   height:100%;
 }
+
+.placeholder-image {
+  filter: blur(5px);
+  transition: 1s filter linear;
+  -webkit-transition: 1s -webkit-filter linear;
+  -moz-transition: 1s -moz-filter linear;
+  -ms-transition: 1s -ms-filter linear;
+  -o-transition: 1s -o-filter linear;
+}
+.placeholder-image.enhanced {
+  filter: blur(0px);
+}
+
