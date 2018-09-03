@@ -4,11 +4,8 @@ number: "01"
 title: "Adventures in Thailand"
 entry_image: entry_9.jpg
 hero_image: hero_9.jpg
-image_2: image_2.jpg
-image_3: image_3.jpg
-image_9: image_9.jpg
 additional_images:
-    pano_1.jpg: Pano test1
+    image_0.jpg: Pano test1
     image_1.jpg: A view from the beach near the Wagner Condo
     image_2.jpg: Eating dinner at Mick's house
     image_3.jpg: View over Pattaya
@@ -22,22 +19,18 @@ additional_images:
     image_11.jpg: Awesome pic of the valley
 thumbnail: data:image/jpeg;base64,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
 ---
-{% assign image_path = site.images_directory | append: page.number |append: "/low_res/" %}
-{% assign image_3_path = image_path | append: page.image_3 %}
-{% assign image_2_path = image_path | append: page.image_2 %}
-{% assign image_9_path = image_path | append: page.image_9 %}
 
 Last year we were presented with a once in a lifetime opportunity to visit Thailand. My friends Mike's parents have been
 living out there for almost three years. Katie and I were lucky enough to be included in this Wagner family vacation
 to visit his parents who lived in Pattaya Thailand!
 
-<div class="image-wrap"><img class="blog-image" data-src="{{image_3_path}}"></div>
+{% include blog_image.html image_name="image_3.jpg" %}
 
 We did a lot of cool stuff that I will limit in this sample blog post. The Wagner family had a private driver name Mick.
 We rented a 12 passenger van for the week and we drove around in that. He even had us over for dinner once. It was quite
 the experience.
 
-<div class="image-wrap"><img class="blog-image" data-src="{{image_2_path}}"></div>
+{% include blog_image.html image_name="image_2.jpg" %}
 
 One of the highlights of the trip was going to see the elephants. When we tell people this they usually ask, "Did you ride them"?
 And we always proudly responded with "No"! We learned on this trip how poorly treated elephants are by tourists. They are
@@ -45,6 +38,6 @@ essentially tortured in captivity their entire lives for the pleasure of humans.
 
 We happened to visit "Elephant Nature Park" which is a elephant sanctuary that rescues these creatures.
 
-<div class="image-wrap"><img class="blog-image" data-src="{{image_9_path}}"></div>
+{% include blog_image.html image_name="image_9.jpg" %}
 
 Overall it was an amazing trip with way more details that I will leave out of this sample blog post for now!

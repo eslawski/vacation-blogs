@@ -4,11 +4,8 @@ number: "01"
 title: "Adventures in Thailand"
 entry_image: entry_13.jpg
 hero_image: hero_13.jpg
-image_2: image_2.jpg
-image_3: image_3.jpg
-image_9: image_9.jpg
 additional_images:
-    pano_1.jpg: Pano test1
+    image_0.jpg: Pano test1
     image_1.jpg: A view from the beach near the Wagner Condo
     image_2.jpg: Eating dinner at Mick's house
     image_3.jpg: View over Pattaya
@@ -22,22 +19,18 @@ additional_images:
     image_11.jpg: Awesome pic of the valley
 thumbnail: data:image/jpeg;base64,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
 ---
-{% assign image_path = site.images_directory | append: page.number |append: "/low_res/" %}
-{% assign image_3_path = image_path | append: page.image_3 %}
-{% assign image_2_path = image_path | append: page.image_2 %}
-{% assign image_9_path = image_path | append: page.image_9 %}
 
 Last year we were presented with a once in a lifetime opportunity to visit Thailand. My friends Mike's parents have been
 living out there for almost three years. Katie and I were lucky enough to be included in this Wagner family vacation
 to visit his parents who lived in Pattaya Thailand!
 
-<div class="image-wrap"><img class="blog-image" data-src="{{image_3_path}}"></div>
+{% include blog_image.html image_name="image_3.jpg" %}
 
 We did a lot of cool stuff that I will limit in this sample blog post. The Wagner family had a private driver name Mick.
 We rented a 12 passenger van for the week and we drove around in that. He even had us over for dinner once. It was quite
 the experience.
 
-<div class="image-wrap"><img class="blog-image" data-src="{{image_2_path}}"></div>
+{% include blog_image.html image_name="image_2.jpg" %}
 
 One of the highlights of the trip was going to see the elephants. When we tell people this they usually ask, "Did you ride them"?
 And we always proudly responded with "No"! We learned on this trip how poorly treated elephants are by tourists. They are
@@ -45,6 +38,6 @@ essentially tortured in captivity their entire lives for the pleasure of humans.
 
 We happened to visit "Elephant Nature Park" which is a elephant sanctuary that rescues these creatures.
 
-<div class="image-wrap"><img class="blog-image" data-src="{{image_9_path}}"></div>
+{% include blog_image.html image_name="image_9.jpg" %}
 
 Overall it was an amazing trip with way more details that I will leave out of this sample blog post for now!

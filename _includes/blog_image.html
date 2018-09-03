@@ -1,0 +1,8 @@
+{% assign image_path = site.images_directory | append: page.number | append: "/low_res/" %}
+
+
+<div class="image-wrap">
+    <img class="blog-image"
+         data-src="{{image_path | append: include.image_name}}"
+         data-caption="{{page.additional_images[include.image_name]}}">
+</div>
