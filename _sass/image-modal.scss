@@ -1,0 +1,61 @@
+/**
+ * Image modal
+ */
+
+body.modal-opened {
+  // prevents background scrolling when modal opened
+  overflow: hidden;
+}
+
+#image-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+
+  &.showing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgba(255,255,255,.7);
+    font-size: 50px;
+    padding: 50px 50px 0 0;
+
+    @media only screen and (max-width: 1024px) {
+      padding: 30px 30px 0 0;
+      font-size: 40px;
+    }
+  }
+
+  .modal-image {
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+  }
+
+  .modal-caption {
+    display: block;
+    color: #ccc;
+    padding: 10px 0;
+    text-align: center;
+  }
+}

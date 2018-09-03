@@ -1,0 +1,60 @@
+/**
+ * Homepage (list of blogs)
+ */
+.home {
+  .post-list-heading {
+    font-size: 3.5em;
+    margin: 10px 0 20px 10px;
+    text-transform: uppercase;
+  }
+
+  .post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 50vh;
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 40vh;
+    }
+
+    .post-entry-container {
+      position: relative;
+      overflow: hidden;
+
+      .post-entry-image {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        display: block;
+        transition: width 1s ease, height 1s ease, 1s filter linear;
+        -webkit-transition: width 1s ease, height 1s ease, 1s -webkit-filter linear;
+
+        &:hover {
+          width: 105%;
+          height: 105%;
+        }
+      }
+
+      .post-entry-text {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0 0 20px 20px;
+        color: #fff;
+
+        .title {
+          font-weight: 500;
+          font-size: 2.25rem;
+
+          @media only screen and (max-width: 768px) {
+            font-size: 1.75em;
+          }
+        }
+
+      }
+    }
+  }
+}
