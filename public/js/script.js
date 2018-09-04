@@ -1,17 +1,10 @@
 $(function() {
-    initializePage();
-
-
-});
-
-function initializePage() {
     enhanceImages();
     changeSidebar();
     initializeBlogImageClicks();
     initializeMobileMenu();
     loadDeferredImages();
-
-}
+});
 
 function changeSidebar() {
     setTimeout(function() {
@@ -25,13 +18,19 @@ function loadDeferredImages() {
     });
 }
 
+function sendBlogImageClickEvent(imagePath) {
+    ga('send', 'event', 'BlogImage', 'click', imagePath);
+}
+
 function initializeBlogImageClicks() {
     $('body').removeClass('modal-opened');
     $('.blog-image').click(function(event) {
-        var loader = $('<div class="loader"></div>');
         var imageComponent = $(event.target);
+        var imagePath = imageComponent.attr('src');
+        var loader = $('<div class="loader"></div>');
+        sendBlogImageClickEvent(imagePath);
         imageComponent.parent().append(loader);
-        var highResImagePath = imageComponent.attr('src').replace('low_res', 'high_res');
+        var highResImagePath = imagePath.replace('low_res', 'high_res');
         $('.modal-image').attr('src', highResImagePath).on('load', function () {
             loader.remove();
             $("#image-modal").addClass("showing");
@@ -50,13 +49,7 @@ function initializeBlogImageClicks() {
 }
 
 function initializeMobileMenu() {
-    // Menu toggle
     $('.mobile-menu-toggle').click(function() {
-        $('body').toggleClass("menu-open");
-    });
-
-    // Menu toggle
-    $('.menu-item').click(function() {
         $('body').toggleClass("menu-open");
     });
 }

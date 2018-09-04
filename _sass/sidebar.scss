@@ -33,9 +33,11 @@
       &.make-visible {
         // Redundant, but it prevents the image from loading unnecessarily
         background: linear-gradient(
-                        rgba(0, 0, 0, .4),
-                        rgba(0, 0, 0, .4)
-        ), url("/public/images/profile_pic_resized.jpg")
+                        rgba(0, 0, 0, 0.01) 0,
+                        rgba(0, 0, 0, 0.2) 40%,
+                        rgba(0, 0, 0, 0.6) 80%,
+                        rgba(0, 0, 0, 0.7) 100%),
+                        url("/public/images/profile_pic_resized.jpg")
       }
     }
 

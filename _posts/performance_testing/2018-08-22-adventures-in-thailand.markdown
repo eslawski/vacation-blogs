@@ -33,7 +33,12 @@ the experience.
 {% include blog_image.html image_name="image_2.jpg" %}
 
 One of the highlights of the trip was going to see the elephants. When we tell people this they usually ask, "Did you ride them"?
-And we always proudly responded with "No"! We learned on this trip how poorly treated elephants are by tourists. They are
+And we always proudly responded with "No"!
+
+{% include blog_image.html image_name="image_10.jpg" %}
+
+
+We learned on this trip how poorly treated elephants are by tourists. They are
 essentially tortured in captivity their entire lives for the pleasure of humans.
 
 We happened to visit "Elephant Nature Park" which is a elephant sanctuary that rescues these creatures. This is some more filler so that it wraps to the next line. And look how easy it was to embed a video.
