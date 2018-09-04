@@ -19,7 +19,10 @@ function loadDeferredImages() {
 }
 
 function sendBlogImageClickEvent(imagePath) {
-    ga('send', 'event', 'BlogImage', 'click', imagePath);
+    gtag('event', 'click', {
+        'event_category': 'BlogImage',
+        'event_label': imagePath
+    });
 }
 
 function initializeBlogImageClicks() {
