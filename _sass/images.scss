@@ -39,7 +39,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    transition: all 1s linear;
+    transition: opacity 1s linear;
+    -webkit-transition: opacity 1s linear;
   }
 
   img.loaded {
@@ -69,7 +70,8 @@
     opacity: 0;
     top: 0;
     left: 0;
-    transition: all 1s linear;
+    transition: opacity 1s linear;
+    -webkit-transition: opacity 1s linear;
 
     &.loaded {
       opacity: 1;
