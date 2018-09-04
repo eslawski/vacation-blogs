@@ -1,5 +1,6 @@
 $(function() {
     enhanceImages();
+    enhanceBackgroundImages();
     changeSidebar();
     initializeBlogImageClicks();
     initializeMobileMenu();
@@ -58,21 +59,37 @@ function initializeMobileMenu() {
 }
 
 function enhanceImages() {
-    $('.placeholder-image').each(function(index, element) {
-        var $element = $(element);
-        var sharpenedImagePath = $element.data("highResImagePath");
+    $('.progressive-loader').each(function(index, element) {
+        var progressiveLoader = $(element);
+        var sharpenedImagePath = progressiveLoader.data("highResImagePath");
 
         if(sharpenedImagePath) {
-            var img = new Image();
-            img.onload = function() {
-                // IMPORTANT: For some reason on localhost setting the background image this way retrieves the
-                // background image again and causes this weird flickering. This does not happen on production.
-                // probably because of weird caching issues with localhost.
-                var currentBackground = $(element).css('background-image');
-                $element.css('background-image', currentBackground.replace(/url\([^)]*\)/gi, "url("+sharpenedImagePath+")"));
-                $element.addClass('enhanced');
+            var largeImage = new Image();
+            largeImage.onload = function() {
+                largeImage.classList.add("loaded");
             };
-            img.src = sharpenedImagePath;
+            largeImage.classList.add("large-image");
+            progressiveLoader.append(largeImage);
+            largeImage.src = sharpenedImagePath;
+        }
+    });
+}
+
+function enhanceBackgroundImages() {
+    $('.progressive-background-loader').each(function(index, element) {
+        var progressiveLoader = $(element);
+        var sharpenedImagePath = progressiveLoader.data("highResImagePath");
+
+        if(sharpenedImagePath) {
+            var imageReference = new Image();
+            var largeBackground = $('<div/>');
+            imageReference.onload = function() {
+                largeBackground.css('background-image', "url(" + sharpenedImagePath + ")");
+                largeBackground.addClass("loaded");
+            };
+            largeBackground.addClass("large-background");
+            progressiveLoader.append(largeBackground);
+            imageReference.src = sharpenedImagePath;
         }
     });
 }

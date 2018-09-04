@@ -12,10 +12,9 @@ layout: default
   {% assign hero_image_path = site.images_directory | append: page.number |append: "/" | append: page.hero_image %}
 
   <div class="hero">
-      <div class="placeholder-image"
-           data-high-res-image-path="{{hero_image_path}}"
-          style="background-image: linear-gradient(to bottom,rgba(22,27,33,.5) 0,rgba(22,27,33,.5) 100%),
-          url({{page.thumbnail}})">
+      <div class="progressive-background-loader"
+           data-high-res-image-path="{{hero_image_path}}">
+          <div class="small-background loaded" style="background-image: url({{page.thumbnail}})"></div>
       </div>
     <div>
       <span class="post-number">{{page.number}}</span>
