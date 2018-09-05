@@ -1,6 +1,7 @@
 ---
 layout: post
-number: "01"
+debug: true
+number: "XX"
 title: "Adventures in Thailand"
 entry_image: entry_10.jpg
 hero_image: hero_10.jpg

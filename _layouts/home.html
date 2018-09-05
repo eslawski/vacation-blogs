@@ -6,6 +6,10 @@ layout: default
     {%- if site.posts.size > 0 -%}
     <div class="post-list">
         {%- for post in site.posts -%}
+            {% if site.is_debug == false and post.debug == true %}
+                {% continue %}
+            {% endif %}
+
             {% assign entry_image_path = site.images_directory | append: post.number | append: "/" | append: post.entry_image %}
 
         <div class="post-entry-image">

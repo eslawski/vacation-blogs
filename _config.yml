@@ -20,6 +20,9 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 images_directory: "/public/images/"
 url: "http://evanslawski.com" # the base hostname & protocol for your site, e.g. http://example.com
 
+# Turns on all the 'performance_testing' blogs
+is_debug: true
+
 sass:
   sass_dir: _sass
 
