@@ -24,18 +24,18 @@ Last year we were presented with a once in a lifetime opportunity to visit Thail
 living out there for almost three years. Katie and I were lucky enough to be included in this Wagner family vacation
 to visit his parents who lived in Pattaya Thailand!
 
-{% include blog_image.html image_name="image_3.jpg" %}
+{% include standalone_blog_image.html image_name="image_3.jpg" %}
 
 We did a lot of cool stuff that I will limit in this sample blog post. The Wagner family had a private driver name Mick.
 We rented a 12 passenger van for the week and we drove around in that. He even had us over for dinner once. It was quite
 the experience.
 
-{% include blog_image.html image_name="image_2.jpg" %}
+{% include standalone_blog_image.html image_name="image_2.jpg" %}
 
 One of the highlights of the trip was going to see the elephants. When we tell people this they usually ask, "Did you ride them"?
 And we always proudly responded with "No"!
 
-{% include blog_image.html image_name="image_10.jpg" %}
+{% include image_grid_large_portrait.html top_image="image_9.jpg" bottom_image="image_11.jpg" portrait_image="image_10.jpg" %}
 
 
 We learned on this trip how poorly treated elephants are by tourists. They are

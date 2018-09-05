@@ -91,3 +91,57 @@
     /* this is needed so Safari keeps sharp edges */
   }
 }
+
+
+@mixin inline-blog-image-section {
+  max-width: 60%;
+  padding: 20px 0 20px 0;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
+  }
+
+  img {
+    width: 90%;
+
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+.standalone-blog-image {
+  @include inline-blog-image-section;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.image-grid {
+  @include inline-blog-image-section;
+  display: grid;
+  align-items: center;
+
+  &.large-portrait {
+    grid-template-columns: 3fr 3fr;
+    grid-template-rows: 3fr 3fr;
+    grid-gap: 3px;
+    grid-template-areas:
+      "top-image portrait-image"
+      "bottom-image portrait-image";
+
+    .top-image {
+      grid-area: top-image;
+      align-self: flex-end;
+      display: grid;
+    }
+
+    .bottom-image {
+      grid-area: bottom-image;
+    }
+
+    .portrait-image {
+      grid-area: portrait-image;
+    }
+  }
+}
