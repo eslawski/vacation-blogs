@@ -36,6 +36,16 @@
       }
     }
 
+    .hero-overlay {
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(to bottom,rgba(22,27,33,.5) 0,rgba(22,27,33,.5) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     .post-number {
       border-bottom: 2px solid #fff;
       font-size: 2.5em;
