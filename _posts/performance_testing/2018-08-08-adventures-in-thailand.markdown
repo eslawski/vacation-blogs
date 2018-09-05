@@ -5,7 +5,7 @@ title: "Adventures in Thailand"
 entry_image: entry_14.jpg
 hero_image: hero_14.jpg
 additional_images:
-    image_0.jpg: Pano test1
+    pano_1.jpg: Pano test1
     image_1.jpg: A view from the beach near the Wagner Condo
     image_2.jpg: Eating dinner at Mick's house
     image_3.jpg: View over Pattaya
