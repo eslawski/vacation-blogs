@@ -30,7 +30,7 @@ We did a lot of cool stuff that I will limit in this sample blog post. The Wagne
 We rented a 12 passenger van for the week and we drove around in that. He even had us over for dinner once. It was quite
 the experience.
 
-{% include standalone_blog_image.html image_name="image_2.jpg" %}
+{% include image_grid_large_portrait.html orientation="left" top_image="image_9.jpg" bottom_image="image_11.jpg" portrait_image="image_10.jpg" %}
 
 One of the highlights of the trip was going to see the elephants. When we tell people this they usually ask, "Did you ride them"?
 And we always proudly responded with "No"!
