@@ -41,6 +41,7 @@
     width: 100%;
     transition: opacity .5s linear;
     -webkit-transition: opacity .5s linear;
+    transform: scale(1.07); // Removes white borders when blurring
   }
 
   img.loaded {
@@ -77,6 +78,7 @@
     left: 0;
     transition: opacity 1s ease;
     -webkit-transition: opacity 1s ease;
+    transform: scale(1.07); // Removes white borders when blurring
 
     &.loaded {
       opacity: 1;
