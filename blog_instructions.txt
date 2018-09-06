@@ -37,6 +37,7 @@ TODO later:
 - Make back button press close image modals
 - Add other sections to the site
 - Add categories to blog posts and allow for filtering
+- Change up about section photo to maybe use primitive too
 - Optimize images further
 	- Use webp images with fallbacks
 	- Use srcset to grab different images depending on the device size
