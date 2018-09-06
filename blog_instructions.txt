@@ -33,12 +33,14 @@ Running Jekyll:
 	NOTE: Must always restart this after changing _config.ymal
 
 TODO later:
-- Maybe use webp images
 - Sticky mobile nav bar. Apparently mobile devices have trouble with this.
 - Make back button press close image modals
+- Add other sections to the site
+- Add categories to blog posts and allow for filtering
 - Optimize images further
 	- Use webp images with fallbacks
 	- Use srcset to grab different images depending on the device size
 - Clean up
 	- Reorganize scss more logically
 	- Remove performance testing code
+	- Reorganize html template files
