@@ -1,0 +1,47 @@
+- Create post file
+	- Copy and paste an old one
+	- Change numbers
+	- Make folder for images corresponding to the post number
+
+- Rename images by numbering them
+- Rotate images as needed
+- Place original images in new image directory just in case
+
+- Pick out a hero/entry image
+	- Scale down to 400 X 600ish (15% for landscape pixel photos @ 80% quality)
+	- Rename and put this image in new image directory you just created and reference in front matter
+	- Go to this directory: C:\Users\Evan\go\bin
+	- Place the image in that directory too (haven't setup environment variable yet)
+	- Run: primitive -i entry_1.jpg -o entry_1_primitive.svg -n 200
+	- Take that svg and run it through base64 image encoder
+	- This becomes the 'thumbnail' in the front matter
+	- Take original quality photo and create hero image (30% scale @ 90% quality)
+	- Rename and put this image in new image directory you just created and reference in front matter
+
+- Optimize the rest of the images you want to include in post
+	- Go to https://bulkresizephotos.com/
+	- Low Res images 15% @ 80% quality
+	- High Res images 50% @ 80% quality
+
+- Write that blog!
+- Look at examples for image grids, panoramic pictures, videos, etc.
+
+- To view all the performance_testing blogs you just need to change the is_debug flag in _config.ymal
+
+Running Jekyll:
+	bundle exec jekyll serve --host=0.0.0.0
+	NOTE: Must always restart this after changing _config.ymal
+
+TODO later:
+- Sticky mobile nav bar. Apparently mobile devices have trouble with this.
+- Make back button press close image modals
+- Add other sections to the site
+- Add categories to blog posts and allow for filtering
+- Change up about section photo to maybe use primitive too
+- Optimize images further
+	- Use webp images with fallbacks
+	- Use srcset to grab different images depending on the device size
+- Clean up
+	- Reorganize scss more logically
+	- Remove performance testing code
+	- Reorganize html template files

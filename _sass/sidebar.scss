@@ -1,0 +1,109 @@
+/**
+ * Side bar for large screens. See mobile-menu.css for mobile version.
+ */
+.sidebar {
+  position: fixed;
+  width: $sidebar-width;
+  background-color: #202020;
+  bottom: 0;
+  top: 0;
+
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+    height: $mobile-sidebar-height;
+    align-items: center;
+    position: relative;
+  }
+
+  .sidebar-image {
+    width: $sidebar-width;
+    position: fixed;
+    opacity: 0;
+    background-size: cover !important;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -ms-transition: opacity .4s ease-in-out;
+    -o-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+
+    &.about {
+      &.make-visible {
+        // Redundant, but it prevents the image from loading unnecessarily
+        background: linear-gradient(
+                        rgba(0, 0, 0, 0.01) 0,
+                        rgba(0, 0, 0, 0.2) 40%,
+                        rgba(0, 0, 0, 0.6) 80%,
+                        rgba(0, 0, 0, 0.7) 100%),
+                        url("/public/images/profile_pic_resized.jpg")
+      }
+    }
+
+    &.make-visible {
+      opacity: 1;
+    }
+  }
+
+  .sidebar-content {
+    color: rgba(255,255,255,.5);
+    margin: 20px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 30px;
+
+    @media only screen and (max-width: 1024px) {
+      position: relative;
+      margin: 0;
+      padding: 10px 0 0 10px;
+    }
+  }
+
+  .sidebar-about {
+    h1 {
+      color: #fff;
+      margin-top: 0;
+      font-size: 3.25rem;
+      margin-bottom: 0;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 1.5em;
+      }
+    }
+
+    p {
+      margin: 0 0 20px 0;
+    }
+
+    .lead {
+      color: #A9B1BA;
+    }
+  }
+
+  .sidebar-nav {
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
+
+    .sidebar-nav-item {
+      display: block;
+      line-height: 1.75;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5em;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+
+      &.active {
+        font-weight: bold;
+        color: #42a9ef;
+      }
+    }
+  }
+}

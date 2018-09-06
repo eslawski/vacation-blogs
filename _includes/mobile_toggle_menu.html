@@ -7,7 +7,7 @@
 <div id="modal-menu">
     <ul class="menu-list-items">
         <li class="menu-item">
-            <a class="page-link sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Blogs</a>
+            <a class="page-link sidebar-nav-item{% if page.url == '/' or page.url == '' %} active{% endif %}" href="/">Blogs</a>
         </li>
 
         {% assign pages_list = site.pages %}

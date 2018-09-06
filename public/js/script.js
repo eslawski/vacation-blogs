@@ -1,46 +1,10 @@
 $(function() {
-    initializePage();
-
-    var $wrap = $( "#wrap" );
-    $wrap.on( "click", ".page-link", function( event ) {
-        event.preventDefault();
-        if ( window.location === this.href ) {
-            return;
-        }
-        // Could update the page title here
-        History.pushState( null, "", this.href );
-    } );
-
-    History.Adapter.bind( window, "statechange", function() {
-        var state = History.getState();
-        $.get( state.url, function( res ) {
-            $.each( $( res ), function( index, elem ) {
-                if ( $wrap.selector !== "#" + elem.id ) {
-                    return;
-                }
-                $wrap.html($(elem).html());
-                initializePage();
-            } );
-
-        } );
-    } );
-});
-
-function heroImageTesting() {
-    var img = new Image();
-    img.onload = function() {
-        debugger;
-    };
-    img.src = "/public/images/01/hero_image.jpg";
-}
-
-function initializePage() {
-    // loadDeferredImages();
-
+    enhanceImages();
     changeSidebar();
     initializeBlogImageClicks();
     initializeMobileMenu();
-}
+    loadDeferredImages();
+});
 
 function changeSidebar() {
     setTimeout(function() {
@@ -49,20 +13,27 @@ function changeSidebar() {
 }
 
 function loadDeferredImages() {
-    $(document).ready(function(){
-        $(".blog-image").each(function(index, element){
-            $(element).attr("src", $(element).attr("data-src"));
-        });
+    $(".blog-image").each(function(index, element){
+        $(element).attr("src", $(element).attr("data-src"));
+    });
+}
+
+function sendBlogImageClickEvent(imagePath) {
+    gtag('event', 'click', {
+        'event_category': 'BlogImage',
+        'event_label': imagePath
     });
 }
 
 function initializeBlogImageClicks() {
     $('body').removeClass('modal-opened');
     $('.blog-image').click(function(event) {
-        var loader = $('<div class="loader"></div>');
         var imageComponent = $(event.target);
+        var imagePath = imageComponent.attr('src');
+        var loader = $('<div class="loader"></div>');
+        sendBlogImageClickEvent(imagePath);
         imageComponent.parent().append(loader);
-        var highResImagePath = imageComponent.attr('src').replace('low_res', 'high_res');
+        var highResImagePath = imagePath.replace('low_res', 'high_res');
         $('.modal-image').attr('src', highResImagePath).on('load', function () {
             loader.remove();
             $("#image-modal").addClass("showing");
@@ -72,23 +43,38 @@ function initializeBlogImageClicks() {
     });
 
     $('#image-modal').click(function(event) {
-        if(event.target.id === "image-modal") {
+        if(!event.target.className.includes("modal-image")) {
             $('#image-modal').removeClass("showing");
             $('body').removeClass('modal-opened');
             $('.modal-caption').html("");
-
         }
     });
 }
 
 function initializeMobileMenu() {
-    // Menu toggle
     $('.mobile-menu-toggle').click(function() {
         $('body').toggleClass("menu-open");
     });
+}
 
-    // Menu toggle
-    $('.menu-item').click(function() {
-        $('body').toggleClass("menu-open");
+function enhanceImages() {
+    $('.progressive-loader').each(function(index, element) {
+        var progressiveLoader = $(element);
+        var sharpenedImagePath = progressiveLoader.data("highResImagePath");
+
+        if(sharpenedImagePath) {
+            var largeImage = new Image();
+            largeImage.onload = function() {
+                largeImage.classList.add("loaded");
+            };
+            largeImage.classList.add("large-image");
+
+            if(progressiveLoader.hasClass('fixed')) {
+                largeImage.classList.add("force-hero-cover");
+            }
+
+            progressiveLoader.append(largeImage);
+            largeImage.src = sharpenedImagePath;
+        }
     });
 }
