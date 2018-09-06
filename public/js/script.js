@@ -1,6 +1,5 @@
 $(function() {
     enhanceImages();
-    enhanceBackgroundImages();
     changeSidebar();
     initializeBlogImageClicks();
     initializeMobileMenu();
@@ -69,27 +68,13 @@ function enhanceImages() {
                 largeImage.classList.add("loaded");
             };
             largeImage.classList.add("large-image");
+
+            if(progressiveLoader.hasClass('fixed')) {
+                largeImage.classList.add("force-hero-cover");
+            }
+
             progressiveLoader.append(largeImage);
             largeImage.src = sharpenedImagePath;
-        }
-    });
-}
-
-function enhanceBackgroundImages() {
-    $('.progressive-background-loader').each(function(index, element) {
-        var progressiveLoader = $(element);
-        var sharpenedImagePath = progressiveLoader.data("highResImagePath");
-
-        if(sharpenedImagePath) {
-            var imageReference = new Image();
-            var largeBackground = $('<div/>');
-            imageReference.onload = function() {
-                largeBackground.css('background-image', "url(" + sharpenedImagePath + ")");
-                largeBackground.addClass("loaded");
-            };
-            largeBackground.addClass("large-background");
-            progressiveLoader.append(largeBackground);
-            imageReference.src = sharpenedImagePath;
         }
     });
 }

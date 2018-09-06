@@ -12,10 +12,11 @@ layout: default
   {% assign hero_image_path = site.images_directory | append: page.number |append: "/" | append: page.hero_image %}
 
   <div class="hero">
-      <div class="progressive-background-loader"
-           data-high-res-image-path="{{hero_image_path}}">
-          <div class="small-background loaded" style="background-image: url({{page.thumbnail}})"></div>
+      <div class="page-link progressive-loader fixed"
+           data-high-res-image-path="{{hero_image_path}} ">
+          <img class="small-image loaded force-hero-cover" src="{{page.thumbnail}}" />
       </div>
+
     <div class="hero-overlay">
       <span class="post-number">{{page.number}}</span>
       <h1 class="post-title">{{page.title}}</h1>
@@ -27,19 +28,7 @@ layout: default
       {{ content }}
     </div>
 
-      {%- if page.additional_images -%}
-      <h1 class="additional-images-title">Additional Images</h1>
-      <div class="additional-images">
-          {%- for image in page.additional_images -%}
-          {% assign image_path = site.images_directory | append: page.number |append: "/low_res/" | append: image[0] %}
-          <div class="image-wrap {% if image[0] contains 'pano' %} panoramic {% endif %}">
-              <img class="blog-image"
-                   data-src="{{image_path}}"
-                   data-caption="{{image[1]}}">
-          </div>
-          {%- endfor -%}
-      </div>
-      {%- endif -%}
+
   </div>
 
 </div>
