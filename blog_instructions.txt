@@ -41,7 +41,9 @@ TODO later:
 - Optimize images further
 	- Use webp images with fallbacks
 	- Use srcset to grab different images depending on the device size
+	- Images in 'Additional Images' section really don't need to be that big
 - Clean up
 	- Reorganize scss more logically
 	- Remove performance testing code
 	- Reorganize html template files
+	- Bring together responsive image background and progressive loader

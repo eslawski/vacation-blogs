@@ -1,12 +1,6 @@
 
 <div class="image-grid large-portrait {{include.orientation}} ">
-    <div class="top-image image-wrap">
-        {% include blog_image.html image_name=include.top_image %}
-    </div>
-    <div class="bottom-image image-wrap">
-        {% include blog_image.html image_name=include.bottom_image %}
-    </div>
-    <div class="portrait-image image-wrap">
-        {% include blog_image.html image_name=include.portrait_image %}
-    </div>
+    {% include blog_image_responsive.html extra_classes="top-image" image_name=include.top_image %}
+    {% include blog_image_responsive.html extra_classes="bottom-image" image_name=include.bottom_image %}
+    {% include blog_image_responsive.html extra_classes="portrait-image" image_name=include.portrait_image %}
 </div>
