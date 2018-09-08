@@ -33,7 +33,6 @@ Running Jekyll:
 	NOTE: Must always restart this after changing _config.ymal
 
 TODO later:
-- Sticky mobile nav bar. Apparently mobile devices have trouble with this.
 - Make back button press close image modals
 - Add other sections to the site
 - Add categories to blog posts and allow for filtering
