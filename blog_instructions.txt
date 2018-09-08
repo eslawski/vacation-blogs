@@ -46,4 +46,5 @@ TODO later:
 	- Reorganize scss more logically
 	- Remove performance testing code
 	- Reorganize html template files
-	- Bring together responsive image background and progressive loader
+	- Bring together responsive image background and progressive loader.
+	    - Beware of transition glitchiness that comes with animating the background image though.

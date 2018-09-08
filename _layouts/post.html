@@ -28,16 +28,16 @@ layout: default
       {{ content }}
     </div>
 
-      {%- if page.additional_images -%}
+      {%- if page.blog_images -%}
       <h1 class="additional-images-title">Additional Images</h1>
       <div class="additional-images">
-          {%- for image in page.additional_images -%}
-          {% assign image_path = site.images_directory | append: page.number |append: "/low_res/" | append: image[0] %}
-          <div class="image-wrap {% if image[0] contains 'pano' %} panoramic {% endif %}">
-              <img class="blog-image"
-                   data-src="{{image_path}}"
-                   data-caption="{{image[1]}}">
-          </div>
+          {%- for image in page.blog_images -%}
+              {% if image[1].additional == true %}
+                  {% assign image_name = image[0] %}
+                  <div class="image-wrap{% if image_name contains 'pano' %} panoramic {% endif %}">
+                      {% include blog_image.html image_name=image_name%}
+                  </div>
+              {% endif %}
           {%- endfor -%}
       </div>
       {%- endif -%}
