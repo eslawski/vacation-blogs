@@ -1,6 +1,8 @@
 
-<div class="image-grid large-portrait {{include.orientation}} ">
-    {% include blog_image_responsive.html extra_classes="top-image" image_name=include.top_image %}
-    {% include blog_image_responsive.html extra_classes="bottom-image" image_name=include.bottom_image %}
-    {% include blog_image_responsive.html extra_classes="portrait-image" image_name=include.portrait_image %}
+<div class="grid-wrapper">
+    <div class="image-grid large-portrait {{include.orientation}} ">
+        {% include blog_image_responsive.html extra_classes="top-image" image_name=include.top_image %}
+        {% include blog_image_responsive.html extra_classes="bottom-image" image_name=include.bottom_image %}
+        {% include blog_image_responsive.html extra_classes="portrait-image" image_name=include.portrait_image %}
+    </div>
 </div>

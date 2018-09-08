@@ -75,8 +75,12 @@
   @include inline-blog-image-section;
 }
 
-.image-grid {
+.grid-wrapper {
   @include inline-blog-image-section;
+
+}
+
+.image-grid {
   display: grid;
   align-items: center;
 
