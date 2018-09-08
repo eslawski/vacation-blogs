@@ -13,6 +13,7 @@
     height: $mobile-sidebar-height;
     align-items: center;
     position: sticky; // Beware of browser support!
+    position: -webkit-sticky; // Beware of browser support!
     z-index: 100;
   }
 
