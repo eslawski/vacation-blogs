@@ -73,7 +73,7 @@ function initializeBlogImageClicks() {
         var loader = $('<div class="loader"></div>');
         sendBlogImageClickEvent(imagePath);
         imageComponent.parent().append(loader);
-        var highResImagePath = imagePath.replace('low_res/.*/', 'high_res');
+        var highResImagePath = imagePath.replace(/low_res\/.*\//, 'high_res/');
         $('.modal-image').attr('src', highResImagePath).on('load', function () {
             loader.remove();
             $("#image-modal").addClass("showing");

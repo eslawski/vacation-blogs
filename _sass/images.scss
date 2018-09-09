@@ -122,6 +122,7 @@
   height: 100% !important;
   display: block;
   object-fit: cover;
+  //object-position: 100% 30%; // Play with these settings to adjust position of picture (can be done on desktop and mobile)
 }
 
 [data-responsive-background-image] {

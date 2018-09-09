@@ -60,17 +60,6 @@
     }
   }
 
-  .post-image {
-    width: 300px;
-    height: 225px;
-    background-size: cover;
-  }
-
-  .blog-image {
-    width: 100%;
-    cursor: pointer;
-  }
-
   .additional-images-title {
     padding-left: 10px;
     font-size: 1.5rem;
@@ -107,4 +96,9 @@
 
 .additional-images-wrapper {
   background-color: #fff;
+}
+
+.blog-image {
+  width: 100%;
+  cursor: pointer;
 }

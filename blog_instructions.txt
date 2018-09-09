@@ -39,10 +39,9 @@ TODO later:
 - Weird issue on chrome for iphone that changes viewport height and causes content to scale
 - Add categories to blog posts and allow for filtering
 - Change up about section photo to maybe use primitive too
+- Spice up about section
 - Optimize images further
 	- Use webp images with fallbacks
-	- Use srcset to grab different images depending on the device size
-	- Images in 'Additional Images' section really don't need to be that big
 - Clean up
 	- Reorganize scss more logically
 	- Remove performance testing code
