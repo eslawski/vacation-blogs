@@ -4,7 +4,21 @@ $(function() {
     initializeBlogImageClicks();
     initializeMobileMenu();
     setupResponsiveBackgroundImages();
+    initializeMasonryGrid();
 });
+
+function initializeMasonryGrid() {
+    var $grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        gutter: 3
+    });
+
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry('layout');
+    });
+}
 
 function changeSidebar() {
     setTimeout(function() {

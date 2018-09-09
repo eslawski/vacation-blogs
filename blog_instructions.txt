@@ -36,7 +36,7 @@ TODO later:
 - Make back button press close image modals
 - Add other sections to the site
 - Fixup about picture
-- Weird issue on chrome for iphone that changes viewport height and causes glitchy images sometimes
+- Weird issue on chrome for iphone that changes viewport height and causes content to scale
 - Add categories to blog posts and allow for filtering
 - Change up about section photo to maybe use primitive too
 - Optimize images further

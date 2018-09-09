@@ -10,6 +10,7 @@ blog_images:
     pano_1.jpg:
         caption: Pano test
         additional: true
+        span: 3
     image_1.jpg:
         caption: A view from the beach near the Wagner Condo
         additional: true
@@ -22,6 +23,7 @@ blog_images:
     image_4.jpg:
         caption: On a boat headed to Ko Chang Island
         additional: true
+        span: 2
     image_5.jpg:
         caption: Beautiful sunset outside our AirBnB
         additional: true
