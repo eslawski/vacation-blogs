@@ -1,5 +1,12 @@
-{% assign image_path = site.images_directory | append: page.number | append: "/low_res/" %}
+{% assign low_res_desktop_path = site.images_directory | append: page.number | append: "/low_res/desktop/" %}
+{% assign low_res_phone_path = site.images_directory | append: page.number | append: "/low_res/phone/" %}
 
-<img class="blog-image"
-     src="{{image_path | append: include.image_name}}"
-     data-caption="{{page.blog_images[include.image_name].caption}}">
+
+<picture>
+    <source srcset="{{low_res_phone_path | append: include.image_name}}" media="(max-width: 768px)">
+    <img class="blog-image"
+         src="{{low_res_desktop_path | append: include.image_name}}"
+         srcset=""
+         data-caption="{{page.blog_images[include.image_name].caption}}">
+
+</picture>
