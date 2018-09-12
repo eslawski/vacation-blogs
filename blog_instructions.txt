@@ -43,6 +43,7 @@ TODO later:
 - Add categories to blog posts and allow for filtering
 - Change up about section photo to maybe use primitive too
 - Spice up about section
+- Previous and next buttons for image sections
 - Automate image optimization process
 - Optimize images further
 	- Use webp images with fallbacks
