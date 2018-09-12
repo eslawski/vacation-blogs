@@ -25,7 +25,14 @@ layout: default
 
   </div>
 
-    {%- if page.blog_images -%}
+    {% assign additional_image_count = 0 %}
+    {% for image in page.blog_images %}
+        {% if image[1].additional == true %}
+            {% assign additional_image_count = additional_image_count | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+
+    {%- if additional_image_count > 0 -%}
         <div class="additional-images-wrapper">
             <h1 class="additional-images-title">Additional Images</h1>
             <div class="additional-images grid">

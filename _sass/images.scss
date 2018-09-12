@@ -83,6 +83,7 @@
 .image-grid {
   display: grid;
   align-items: center;
+  grid-gap: 3px;
 
   &.large-portrait.left {
   grid-template-areas:
@@ -93,7 +94,6 @@
   &.large-portrait {
     grid-template-columns: 3fr 3fr;
     grid-template-rows: 3fr 3fr;
-    grid-gap: 3px;
     grid-template-areas:
       "top-image portrait-image"
       "bottom-image portrait-image";
@@ -111,6 +111,10 @@
     .portrait-image {
       grid-area: portrait-image;
     }
+  }
+
+  &.landscape-3 {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 

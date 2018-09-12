@@ -8,7 +8,7 @@
 - Place original images in new image directory just in case
 
 - Pick out a hero/entry image
-	- Scale down to 400 X 600ish (15% for landscape pixel photos @ 80% quality)
+	- Scale down to 400 X 600ish (16% for landscape pixel photos @ 80% quality)
 	- Rename and put this image in new image directory you just created and reference in front matter
 	- Go to this directory: C:\Users\Evan\go\bin
 	- Place the image in that directory too (haven't setup environment variable yet)
@@ -19,8 +19,11 @@
 	- Rename and put this image in new image directory you just created and reference in front matter
 
 - Optimize the rest of the images you want to include in post
+- BEWARE sometimes images do not take unless you restart the server.
 	- Go to https://bulkresizephotos.com/
-	- Low Res images 15% @ 80% quality
+	- Low Res images
+	    -  phone - 12% @ 80% quality
+	    - desktop = 15% @ 80%
 	- High Res images 50% @ 80% quality
 
 - Write that blog!
@@ -40,6 +43,7 @@ TODO later:
 - Add categories to blog posts and allow for filtering
 - Change up about section photo to maybe use primitive too
 - Spice up about section
+- Automate image optimization process
 - Optimize images further
 	- Use webp images with fallbacks
 - Clean up
