@@ -8,7 +8,7 @@
 - Place original images in new image directory just in case
 
 - Pick out a hero/entry image
-	- Scale down to 400 X 600ish (15% for landscape pixel photos @ 80% quality)
+	- Scale down to 400 X 600ish (16% for landscape pixel photos @ 80% quality)
 	- Rename and put this image in new image directory you just created and reference in front matter
 	- Go to this directory: C:\Users\Evan\go\bin
 	- Place the image in that directory too (haven't setup environment variable yet)
@@ -19,8 +19,11 @@
 	- Rename and put this image in new image directory you just created and reference in front matter
 
 - Optimize the rest of the images you want to include in post
+- BEWARE sometimes images do not take unless you restart the server.
 	- Go to https://bulkresizephotos.com/
-	- Low Res images 15% @ 80% quality
+	- Low Res images
+	    -  phone - 12% @ 80% quality
+	    - desktop = 15% @ 80%
 	- High Res images 50% @ 80% quality
 
 - Write that blog!
@@ -33,15 +36,20 @@ Running Jekyll:
 	NOTE: Must always restart this after changing _config.ymal
 
 TODO later:
-- Sticky mobile nav bar. Apparently mobile devices have trouble with this.
 - Make back button press close image modals
 - Add other sections to the site
+- Fixup about picture
+- Weird issue on chrome for iphone that changes viewport height and causes content to scale
 - Add categories to blog posts and allow for filtering
 - Change up about section photo to maybe use primitive too
+- Spice up about section
+- Previous and next buttons for image sections
+- Automate image optimization process
 - Optimize images further
 	- Use webp images with fallbacks
-	- Use srcset to grab different images depending on the device size
 - Clean up
 	- Reorganize scss more logically
 	- Remove performance testing code
 	- Reorganize html template files
+	- Bring together responsive image background and progressive loader.
+	    - Beware of transition glitchiness that comes with animating the background image though.

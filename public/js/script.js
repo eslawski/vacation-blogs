@@ -3,8 +3,22 @@ $(function() {
     changeSidebar();
     initializeBlogImageClicks();
     initializeMobileMenu();
-    loadDeferredImages();
+    setupResponsiveBackgroundImages();
+    initializeMasonryGrid();
 });
+
+function initializeMasonryGrid() {
+    var $grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        gutter: 3
+    });
+
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry('layout');
+    });
+}
 
 function changeSidebar() {
     setTimeout(function() {
@@ -12,17 +26,43 @@ function changeSidebar() {
     }, 500);
 }
 
-function loadDeferredImages() {
-    $(".blog-image").each(function(index, element){
-        $(element).attr("src", $(element).attr("data-src"));
-    });
-}
-
 function sendBlogImageClickEvent(imagePath) {
     gtag('event', 'click', {
         'event_category': 'BlogImage',
         'event_label': imagePath
     });
+}
+
+class ResponsiveBackgroundImage {
+    constructor(element) {
+        this.element = element;
+        this.img = element.querySelector('img');
+        this.src = '';
+
+        this.img.addEventListener('load', () => {
+            this.update();
+        });
+
+        if (this.img.complete) {
+            this.update();
+        }
+    }
+
+    update() {
+        let src = typeof this.img.currentSrc !== 'undefined' ? this.img.currentSrc : this.img.src;
+        if (this.src !== src) {
+            this.src = src;
+            this.element.style.backgroundImage = 'url("' + this.src + '")';
+
+        }
+    }
+}
+
+function setupResponsiveBackgroundImages() {
+    let elements = document.querySelectorAll('[data-responsive-background-image]');
+    for (let i=0; i<elements.length; i++) {
+        new ResponsiveBackgroundImage(elements[i]);
+    }
 }
 
 function initializeBlogImageClicks() {
@@ -33,7 +73,7 @@ function initializeBlogImageClicks() {
         var loader = $('<div class="loader"></div>');
         sendBlogImageClickEvent(imagePath);
         imageComponent.parent().append(loader);
-        var highResImagePath = imagePath.replace('low_res', 'high_res');
+        var highResImagePath = imagePath.replace(/low_res\/.*\//, 'high_res/');
         $('.modal-image').attr('src', highResImagePath).on('load', function () {
             loader.remove();
             $("#image-modal").addClass("showing");

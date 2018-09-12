@@ -1,12 +1,23 @@
 ---
 layout: page
 title: About
+page_heading: Hey there!
+number: "about"
+blog_images:
+    skateboarding.jpg:
+        caption: Ann Arbor Skatepark
+    kayaking.jpg:
+        caption: Kayking on the Huron River
+    half_marathon.jpg:
+        caption: Charlevoix Half Marathon
 ---
+My name is Evan and I am Software Developer. I graduated from the University of Michigan, and have
+the privilege of working in the great city of Ann Arbor.
+ My wife, Katie, and I currently live in Dexter, MI where we enjoy exploring the outdoors.
 
-<p class="message">
-  Hey there! Welcome to my website. There isn't much here yet, but check back later for some more goodies.
-</p>
+I set out to create this blog with the intention of documenting our adventures. Thanks for stopping by to check
+it out!
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Cheers! 🍻
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+{% include standalone_blog_image.html image_name="kayaking.jpg" %}

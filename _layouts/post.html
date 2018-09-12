@@ -2,11 +2,6 @@
 layout: default
 ---
 
-<div id="image-modal">
-    <img class="modal-image"/>
-    <div class="modal-caption"></div>
-    <div class="close-modal"><i class="fa fa-times"></i></div>
-</div>
 
 <div class="post">
   {% assign hero_image_path = site.images_directory | append: page.number |append: "/" | append: page.hero_image %}
@@ -28,20 +23,31 @@ layout: default
       {{ content }}
     </div>
 
-      {%- if page.additional_images -%}
-      <h1 class="additional-images-title">Additional Images</h1>
-      <div class="additional-images">
-          {%- for image in page.additional_images -%}
-          {% assign image_path = site.images_directory | append: page.number |append: "/low_res/" | append: image[0] %}
-          <div class="image-wrap {% if image[0] contains 'pano' %} panoramic {% endif %}">
-              <img class="blog-image"
-                   data-src="{{image_path}}"
-                   data-caption="{{image[1]}}">
-          </div>
-          {%- endfor -%}
-      </div>
-      {%- endif -%}
-
   </div>
+
+    {% assign additional_image_count = 0 %}
+    {% for image in page.blog_images %}
+        {% if image[1].additional == true %}
+            {% assign additional_image_count = additional_image_count | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+
+    {%- if additional_image_count > 0 -%}
+        <div class="additional-images-wrapper">
+            <h1 class="additional-images-title">Additional Images</h1>
+            <div class="additional-images grid">
+                <div class="grid-sizer"></div>
+                {%- for image in page.blog_images -%}
+                    {% assign image_details = image[1] %}
+                    {% if image_details.additional == true %}
+                        {% assign image_name = image[0] %}
+                        <div class="image-wrap grid-item{% if image_details.span %} span-{{image_details.span}} {% endif %}">
+                            {% include blog_image.html image_name=image_name%}
+                        </div>
+                    {% endif %}
+                {%- endfor -%}
+            </div>
+        </div>
+    {%- endif -%}
 
 </div>

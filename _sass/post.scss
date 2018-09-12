@@ -60,36 +60,45 @@
     }
   }
 
-  .post-image {
-    width: 300px;
-    height: 225px;
-    background-size: cover;
-  }
-
-  .blog-image {
-    width: 100%;
-    cursor: pointer;
-  }
-
   .additional-images-title {
     padding-left: 10px;
+    font-size: 1.5rem;
+    margin-top: 0;
   }
 
   .additional-images {
-    line-height: 1;
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    grid-gap: 3px 3px;
-
-    @media only screen and (max-width: 768px){
-      margin: 0 -15px;
-    }
+    width: 100%;
   }
 
   .additional-images img {
     /* Just in case there are inline attributes */
-    width: 100% !important;
-    height: auto !important;
+    max-width: 100% !important;
+    vertical-align: top;
   }
+}
+
+.grid-sizer {
+  width: calc(33.333% - 3px);
+}
+
+.grid-item {
+  width: calc(33.333% - 3px);
+  padding-bottom: 3px;
+
+  &.span-2 {
+    width: calc(66.666% - 3px);
+  }
+
+  &.span-3 {
+    width: 100%;
+  }
+}
+
+.additional-images-wrapper {
+  background-color: #fff;
+}
+
+.blog-image {
+  width: 100%;
+  cursor: pointer;
 }

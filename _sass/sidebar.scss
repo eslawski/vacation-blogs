@@ -12,7 +12,9 @@
     width: 100%;
     height: $mobile-sidebar-height;
     align-items: center;
-    position: relative;
+    position: sticky; // Beware of browser support!
+    position: -webkit-sticky; // Beware of browser support!
+    z-index: 100;
   }
 
   .sidebar-image {

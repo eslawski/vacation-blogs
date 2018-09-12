@@ -62,33 +62,27 @@
 
 
 @mixin inline-blog-image-section {
-  max-width: 60%;
+  width: 60%;
   padding: 20px 0 20px 0;
 
   @media only screen and (max-width: 768px) {
-    max-width: 100%;
-  }
-
-  img {
-    width: 90%;
-
-    @media only screen and (max-width: 768px) {
-      width: 100%;
-    }
+    width: 100%;
   }
 }
 
 .standalone-blog-image {
   @include inline-blog-image-section;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+}
+
+.grid-wrapper {
+  @include inline-blog-image-section;
+
 }
 
 .image-grid {
-  @include inline-blog-image-section;
   display: grid;
   align-items: center;
+  grid-gap: 3px;
 
   &.large-portrait.left {
   grid-template-areas:
@@ -99,7 +93,6 @@
   &.large-portrait {
     grid-template-columns: 3fr 3fr;
     grid-template-rows: 3fr 3fr;
-    grid-gap: 3px;
     grid-template-areas:
       "top-image portrait-image"
       "bottom-image portrait-image";
@@ -118,6 +111,10 @@
       grid-area: portrait-image;
     }
   }
+
+  &.landscape-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /**
@@ -128,4 +125,18 @@
   height: 100% !important;
   display: block;
   object-fit: cover;
+  //object-position: 100% 30%; // Play with these settings to adjust position of picture (can be done on desktop and mobile)
+}
+
+[data-responsive-background-image] {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+[data-responsive-background-image] img {
+  opacity: 0; // Allows you to still click on images
 }
