@@ -39,7 +39,7 @@ in time, but they are not able to capture the little details it takes to __tell 
 {% include image_grid_landscapes.html
 image_list="detroit.jpg, tigers.jpg, kayak_trip.jpg, pabst.jpg, fall.jpg, statue.jpg, sunset.jpg, elephants.jpg, thailand_food.jpg" %}
 
-When I was a little kid, we would go on vacation and my parents would make me write
+When I was a little kid, we would go on vacation and my parents would make us write
 in a journal to document our day. Of course, being a little kid I dreaded it, but a couple
 years ago I stumbled upon them. It felt like I relived every moment. I documented things
 I probably would have never remembered otherwise. Little did I know I would be inspiring my future 26 year old self.
