@@ -63,11 +63,18 @@
 
 @mixin inline-blog-image-section {
   width: 60%;
-  height: 500px; // expiremental
   padding: 20px 0 20px 0;
 
   @media only screen and (max-width: 768px) {
     width: 100%;
+  }
+
+  &.portrait {
+    width: 40%;
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+    }
   }
 }
 

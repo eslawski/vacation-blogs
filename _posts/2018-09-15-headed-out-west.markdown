@@ -41,11 +41,11 @@ blog_images:
 ---
 Our day started by waking up at 5:30am. We didn't have to be up for at least another two hours, but you know it’s VACATION DAY! We packed up all our last minute stuff, and were graciously dropped off at the airport by my parents.
 
-{% include standalone_blog_image.html image_name="sendoff.jpg" %}
+{% include standalone_blog_image.html image_name="sendoff.jpg" portrait=true %}
 
 The flight was just under 4 hours. About midway through the pilot told us to look out our windows. Thankfully we were on the correct side of the aircraft, because we got to see a birds eye view of the Grand Canyon.
 
-{% include standalone_blog_image.html image_name="airplane.jpg" %}
+{% include standalone_blog_image.html image_name="airplane.jpg" portrait=true %}
 
 After we touched down, we hopped in a rental car and hit the road. Our first destination on this trip is Tusayan, AZ, home of the South Rim of the Grand Canyon. It was our first time renting a car so that was a fun experience. We had a 4 hour drive ahead of us.
 
