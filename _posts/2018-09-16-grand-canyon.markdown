@@ -93,6 +93,7 @@ blog_images:
         additional: true
     24.1_steak_dinner.jpg:
         caption: Steak dinner
+        additional: true
     24.2_stew.jpg:
         caption: Hikers stew
         additional: true
@@ -134,7 +135,7 @@ __Total Distance__: 17.3 miles
 Without too many spoilers, I think South Kiabab was my favorite of the two. It offered more scenic viewpoints along the canyon.
 
 We started our hike down the South Kiabab around 12:15pm.
-We made quite a few stops on early on because all the views were absolutely breathtaking.
+We made quite a few stops early on because all the views were absolutely breathtaking.
  The first lookout point was less than a mile down and it was called “Ooh Ahh Point”.
    The way the clouds cast their shadows on the canyon as far as the eye can see was breathtaking.
 
@@ -157,7 +158,7 @@ When we finally reached the bottom we got to cross the river via a suspension br
 
 Once we were over the Bridge we knew we were close to Phantom Ranch. At this point, I had just run out of water (3L).
 
-We finally arrived at Phantom Ranch at about 4:30pm, which means it took us just over 4 hours to get down. We checked into the ranch and got our dorm assignments. There are two different options for staying at Phantom Ranch. You can either rent and entire cabin, or stay in their male/female dorms. There is also an option to pitch a tent.
+We finally arrived at Phantom Ranch at about 4:30pm, which means it took us just over 4 hours to get down. We checked into the ranch and got our dorm assignments. There are two different options for staying at Phantom Ranch. You can either rent an entire cabin, or stay in their male/female dorms. There is also an option to pitch a tent.
 
 {% include standalone_blog_image.html image_name="23_phantom_ranch.jpg" %}
 

@@ -57,5 +57,7 @@ TODO later:
 
 Cleanup
 =========
--finish captions
--optimize images smaller for phones
+-Actually use phone images
+
+
+dir /O:D /T:C > test.txt
