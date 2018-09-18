@@ -54,3 +54,8 @@ TODO later:
 	- Reorganize html template files
 	- Bring together responsive image background and progressive loader.
 	    - Beware of transition glitchiness that comes with animating the background image though.
+
+Cleanup
+=========
+-finish captions
+-optimize images smaller for phones

@@ -123,6 +123,10 @@
   &.landscape-3 {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  &.landscape-2 {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /**
