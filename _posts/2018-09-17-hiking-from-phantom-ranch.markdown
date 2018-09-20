@@ -159,7 +159,7 @@ At about noon we had finally reached the top! Total time was about 5.5 hours. We
 {% include image_grid_landscapes_2.html
 image_list="34_done.jpg, 33_ice_cream.jpg" %}
 
-<iframe class="embedded-song" src="https://open.spotify.com/embed/track/4FCOFuhLZPSXISQCF7wck5" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<iframe data-song-info="Started from the bottom by Drake" class="embedded-song" src="https://open.spotify.com/embed/track/4FCOFuhLZPSXISQCF7wck5" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 Would I do Phantom Ranch again? YES absolutely. I would do it tomorrow if my body could handle it. I can confidently say that this was probably one of the most incredible things I have done in my life. I highly recommend anyone who might be interested in this sort of thing to add it to their bucket list.
 
