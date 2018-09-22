@@ -132,6 +132,12 @@ Seeing as most of my bunkmates had already left, I decided to get up and enjoy s
 
 Some other hikers were coming back from breakfast and one of them had a blacklight. I thought it was an interesting choice for a flashlight until I saw what he was using it for. He was searching for scorpions. Apparently scorpions glow fluorescent yellow when exposed to a black light. Maybe it’s just because I am from Michigan, but I was so pumped. The guy let me borrow the light for a bit and I discovered the bench I had been sitting on for the past half hour was crawling with them.
 
+<div class="video-container">
+    <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_pXMJ9cL6es" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+
 Katie woke up around 5:30am, and at that point the sun had just started to rise. We smashed some delicious poptarts for breakfast and prepared for departure. We headed towards the Bright Angel Trail to start our trek up at around 6:30am.
 
 {% include standalone_blog_image.html image_name="4_bridge.jpg" %}

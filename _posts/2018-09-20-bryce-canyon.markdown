@@ -34,7 +34,7 @@ blog_images:
     8_fire.jpg:
         caption: View looking out into the rest of the park. If you look closely you can see smoke in the distance. They were actually battling an active wildfire.
         additional: true
-    9_hoodoos.jpg:
+    9_hoodoos_evan.jpg:
         caption: Pic overlooking the canyon
         additional: true
     10_inspiration_point.jpg:
@@ -54,7 +54,11 @@ Today we said goodbye to Lake Powell and headed to Bryce Canyon. We left late mo
 
 Once we got close to Bryce Canyon, we pulled off on the side of the road. I had rigged up a car mount for the gopro using one of those industrial strength suction cups. I suctioned it to the hood of our car and we drove down into the valley where we were staying.
 
-{video coming soon}
+<div class="video-container">
+    <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sGk1O4Y578Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
 
 We finally arrived in Tropic, UT where we were staying. We are renting a cabin for a couple nights. It practically has the same amenities as a hotel room, just with our own individual unit. Though there is wifi, but it doesn't quite have the firepower we need to backup all our videos. So check back soon for video footage later.
 
