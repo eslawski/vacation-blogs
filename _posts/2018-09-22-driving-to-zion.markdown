@@ -46,6 +46,7 @@ The drive to Zion was about 3 hours. In order to get to our hotel we had to actu
     </div>
 </div>
 
+<br>
 
 <div class="video-container">
     <div class="video-wrapper">
