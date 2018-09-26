@@ -145,7 +145,11 @@ We went with the wet canyon option. Who doesn’t want to get a little wet? The 
 
 From their headquarters we had about an hour drive to the canyon. Half of that hour was spent on a one lane dirt road carving up and down the backcountry. We finally got there and Stephen gave us a full lesson on how we will be using all the gear.
 
-{video coming soon}
+<div class="video-container">
+    <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9fglRX2n7OY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
 
 To enter the canyon we needed to do a short rappel in. Katie went first. It was a pretty weird feeling to just walk backwards over the edge of a cliff trusting your life in a long rope. Being semi afraid of heights I thought we did pretty well for beginners.
 
@@ -153,7 +157,11 @@ We quickly approached the second rappel, and it dwarfed the first one. Stephen f
 
 This time I went first. Stephen did a great job directing us down, as he was pretty much dangling off the edge (with a safety harness). Once I got to the bottom I managed to get some good footage of Katie coming down.
 
-{video coming soon}
+<div class="video-container">
+    <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ScN4zhRGHzg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
 
 After the rappels we had to do some down climbing. This pretty much involved finding creative ways to apply pressure to the walls and rocks to lower yourself to the ground.
 
@@ -161,7 +169,11 @@ We then started to hit the wet sections. The first part was probably only up to 
 
 {% include standalone_blog_image.html image_name="27.jpg" portrait=true %}
 
-{video coming soon}
+<div class="video-container">
+    <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yzOJ4aEaIoo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
 
 About midway through we ate some lunch surrounded by canyon. The entire day we didn’t see a single person despite the destination being a popular choice for canyoneering adventure companies.
 
