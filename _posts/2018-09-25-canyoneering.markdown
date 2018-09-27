@@ -167,7 +167,7 @@ After the rappels we had to do some down climbing. This pretty much involved fin
 
 We then started to hit the wet sections. The first part was probably only up to our ankles, but the second part got up as high as our waist. It was pretty freaky taking a step into murky water that you had no idea how deep it actually was. Stephen was very surprised how low the water level was. He was saying how some parts usually required a swim to get to the other side!
 
-{% include standalone_blog_image.html image_name="27.jpg" portrait=true %}
+{% include standalone_blog_image.html image_name="27.JPG" portrait=true %}
 
 <div class="video-container">
     <div class="video-wrapper">
@@ -179,11 +179,11 @@ About midway through we ate some lunch surrounded by canyon. The entire day we d
 
 Getting pictures in the canyon was pretty difficult because it involved being “hands free” a lot. Stephen actually had a waterproof camera that he was using to get pictures of us in action. I also had my gopro mounted to my helmet. Unfortunately the footage wasn’t so great because we had it tilted down a little too much, but we captured some good moments.
 
-{% include standalone_blog_image.html image_name="33.jpg" portrait=true %}
+{% include standalone_blog_image.html image_name="33.JPG" portrait=true %}
 
 After some more rappelling, downclimbing, wading through water, and sliding on our skuttlebutts we were at the out-point. This was where we had to do a little bit of basic free climbing. Once we got to the top, our car was surprisingly right around the corner.
 
-{% include standalone_blog_image.html image_name="41.jpg" %}
+{% include standalone_blog_image.html image_name="41.JPG" %}
 
 The total length of the canyon we did was approximately 1.5 miles. Would we ever go again? Yes absolutely! It was TON of fun getting exposed to so many techniques used to explore slot canyons. I cannot imagine how insane it must be to do some of the longer rappels that get up to 300 ft.
 
