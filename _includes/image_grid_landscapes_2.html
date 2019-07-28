@@ -1,0 +1,10 @@
+{% assign images = include.image_list | split: ", " %}
+
+
+<div class="grid-wrapper">
+    <div class="image-grid landscape-2 ">
+        {% for image in images %}
+            {% include blog_image_responsive.html image_name=image %}
+        {% endfor %}
+    </div>
+</div>

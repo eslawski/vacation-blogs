@@ -9,10 +9,11 @@
 
 - Pick out a hero/entry image
 	- Scale down to 400 X 600ish (16% for landscape pixel photos @ 80% quality)
+	- hero 50%
 	- Rename and put this image in new image directory you just created and reference in front matter
 	- Go to this directory: C:\Users\Evan\go\bin
 	- Place the image in that directory too (haven't setup environment variable yet)
-	- Run: primitive -i entry_1.jpg -o entry_1_primitive.svg -n 200
+        primitive -i entry_1.jpg -o entry_1_primitive.svg -n 200
 	- Take that svg and run it through base64 image encoder
 	- This becomes the 'thumbnail' in the front matter
 	- Take original quality photo and create hero image (30% scale @ 90% quality)
@@ -53,3 +54,10 @@ TODO later:
 	- Reorganize html template files
 	- Bring together responsive image background and progressive loader.
 	    - Beware of transition glitchiness that comes with animating the background image though.
+
+Cleanup
+=========
+-Actually use phone images
+
+
+dir /O:D /T:C > test.txt
