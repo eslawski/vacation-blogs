@@ -16,9 +16,8 @@
 title: Evan Slawski
 email: your-email@example.com
 description: "evanslawski"
-images_directory: "/public/images/"
-url: eslawski.github.io
-baseurl: /portfolio-v2
+images_directory: "/portfolio-v2/public/images/"
+baseurl: "/portfolio-v2"
 
 # Turns on all the 'performance_testing' blogs
 is_debug: false
