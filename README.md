@@ -1,4 +1,6 @@
-# portfolio-v2
+NOTE: This blog has been entirely rewritten in GatsbyJS and that is currently being maintained in https://github.com/eslawski/personal-website
+
+# vacation-blogs
 A photo grid inspired blog site built using Jekyll.
 
 Running Jekyll:
